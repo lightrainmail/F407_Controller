@@ -448,6 +448,30 @@ Core/Startup/startup_stm32f407vetx.s.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\F407_Controller.elf.dir\build.make CMakeFiles/F407_Controller.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj
 .PHONY : Core/Startup/startup_stm32f407vetx.s.obj
 
+Drivers/BoardSupportPackage/Src/bsp.obj: Drivers/BoardSupportPackage/Src/bsp.c.obj
+.PHONY : Drivers/BoardSupportPackage/Src/bsp.obj
+
+# target to build an object file
+Drivers/BoardSupportPackage/Src/bsp.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\F407_Controller.elf.dir\build.make CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj
+.PHONY : Drivers/BoardSupportPackage/Src/bsp.c.obj
+
+Drivers/BoardSupportPackage/Src/bsp.i: Drivers/BoardSupportPackage/Src/bsp.c.i
+.PHONY : Drivers/BoardSupportPackage/Src/bsp.i
+
+# target to preprocess a source file
+Drivers/BoardSupportPackage/Src/bsp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\F407_Controller.elf.dir\build.make CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.i
+.PHONY : Drivers/BoardSupportPackage/Src/bsp.c.i
+
+Drivers/BoardSupportPackage/Src/bsp.s: Drivers/BoardSupportPackage/Src/bsp.c.s
+.PHONY : Drivers/BoardSupportPackage/Src/bsp.s
+
+# target to generate assembly for a file
+Drivers/BoardSupportPackage/Src/bsp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\F407_Controller.elf.dir\build.make CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.s
+.PHONY : Drivers/BoardSupportPackage/Src/bsp.c.s
+
 Drivers/LCD_240_280/Src/lcd.obj: Drivers/LCD_240_280/Src/lcd.c.obj
 .PHONY : Drivers/LCD_240_280/Src/lcd.obj
 
@@ -1289,6 +1313,9 @@ help:
 	@echo ... Core/Src/tim.i
 	@echo ... Core/Src/tim.s
 	@echo ... Core/Startup/startup_stm32f407vetx.obj
+	@echo ... Drivers/BoardSupportPackage/Src/bsp.obj
+	@echo ... Drivers/BoardSupportPackage/Src/bsp.i
+	@echo ... Drivers/BoardSupportPackage/Src/bsp.s
 	@echo ... Drivers/LCD_240_280/Src/lcd.obj
 	@echo ... Drivers/LCD_240_280/Src/lcd.i
 	@echo ... Drivers/LCD_240_280/Src/lcd.s

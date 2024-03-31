@@ -28,6 +28,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "lcd.h"
+#include "nrf.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -60,7 +61,7 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint32_t dmaBuffer[20];
+uint32_t dmaBuffer[2];
 /* USER CODE END 0 */
 
 /**
@@ -99,10 +100,10 @@ int main(void)
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
     LCD_Init(WHITE);
-
+    NRF_GPIO_Init();
     //启动ADC
-    HAL_ADCEx_MultiModeStart_DMA(&hadc1,dmaBuffer,20);
-    HAL_ADCEx_MultiModeStart_DMA(&hadc2,dmaBuffer,20);
+    HAL_ADCEx_MultiModeStart_DMA(&hadc1,dmaBuffer,2);
+    HAL_ADCEx_MultiModeStart_DMA(&hadc2,dmaBuffer,2);
 
     //启动定时器3
     HAL_TIM_Base_Start(&htim3);

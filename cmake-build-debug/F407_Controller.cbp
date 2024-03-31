@@ -30,6 +30,7 @@
 					<Add option="-DDEBUG"/>
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32F407xx"/>
+					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/BoardSupportPackage/Inc"/>
 					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/NRF/Inc"/>
 					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/LCD_240_280/Inc"/>
 					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Core/Inc"/>
@@ -67,6 +68,7 @@
 					<Add option="-DDEBUG"/>
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32F407xx"/>
+					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/BoardSupportPackage/Inc"/>
 					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/NRF/Inc"/>
 					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/LCD_240_280/Inc"/>
 					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Core/Inc"/>
@@ -179,6 +181,12 @@
 			<Option target="F407_Controller.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Core/Startup/startup_stm32f407vetx.s">
+			<Option target="F407_Controller.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/BoardSupportPackage/Inc/bsp.h">
+			<Option target="F407_Controller.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/BoardSupportPackage/Src/bsp.c">
 			<Option target="F407_Controller.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h">

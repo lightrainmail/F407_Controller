@@ -23,6 +23,6 @@ CMake Deprecation Warning:
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Minimal optimization, debug info included
--- Configuring done (1.7s)
+-- Configuring done (2.0s)
 -- Generating done (0.1s)
 -- Build files have been written to: C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/cmake-build-debug

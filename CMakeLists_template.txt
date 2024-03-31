@@ -48,7 +48,7 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-include_directories(Drivers/NRF/Inc Drivers/LCD_240_280/Inc ${includes})
+include_directories(Drivers/BoardSupportPackage/Inc Drivers/NRF/Inc Drivers/LCD_240_280/Inc ${includes})
 
 add_definitions(${defines})
 

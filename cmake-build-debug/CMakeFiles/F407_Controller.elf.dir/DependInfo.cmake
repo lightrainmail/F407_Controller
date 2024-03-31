@@ -24,6 +24,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
+  "C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/BoardSupportPackage/Inc"
   "C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/NRF/Inc"
   "C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/LCD_240_280/Inc"
   "C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Core/Inc"
@@ -51,6 +52,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Core/Src/sysmem.c" "CMakeFiles/F407_Controller.elf.dir/Core/Src/sysmem.c.obj" "gcc" "CMakeFiles/F407_Controller.elf.dir/Core/Src/sysmem.c.obj.d"
   "C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Core/Src/system_stm32f4xx.c" "CMakeFiles/F407_Controller.elf.dir/Core/Src/system_stm32f4xx.c.obj" "gcc" "CMakeFiles/F407_Controller.elf.dir/Core/Src/system_stm32f4xx.c.obj.d"
   "C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Core/Src/tim.c" "CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj" "gcc" "CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj.d"
+  "C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/BoardSupportPackage/Src/bsp.c" "CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj" "gcc" "CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj.d"
   "C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/LCD_240_280/Src/lcd.c" "CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj" "gcc" "CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj.d"
   "C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/LCD_240_280/Src/lcd_interface.c" "CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj" "gcc" "CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj.d"
   "C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/NRF/Src/nrf.c" "CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj" "gcc" "CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj.d"
