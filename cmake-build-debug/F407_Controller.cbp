@@ -30,6 +30,7 @@
 					<Add option="-DDEBUG"/>
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32F407xx"/>
+					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/Flash/Inc"/>
 					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/BoardSupportPackage/Inc"/>
 					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/NRF/Inc"/>
 					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/LCD_240_280/Inc"/>
@@ -68,6 +69,7 @@
 					<Add option="-DDEBUG"/>
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32F407xx"/>
+					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/Flash/Inc"/>
 					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/BoardSupportPackage/Inc"/>
 					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/NRF/Inc"/>
 					<Add directory="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/LCD_240_280/Inc"/>
@@ -292,6 +294,12 @@
 			<Option target="F407_Controller.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/CMSIS/LICENSE.txt">
+			<Option target="F407_Controller.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/Flash/Inc/flash.h">
+			<Option target="F407_Controller.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/Flash/Src/flash.c">
 			<Option target="F407_Controller.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/light/OneDrive/STM32F407VET6/F407_Controller/Drivers/LCD_240_280/Inc/.idea/.gitignore">

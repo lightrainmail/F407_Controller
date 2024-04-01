@@ -29,6 +29,8 @@
 #include "bsp.h"
 #include "semphr.h"
 #include "nrf.h"
+#include "flash.h"
+#include "pic.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -38,13 +40,19 @@ osSemaphoreId_t BinSem_DataReadyHandle;
 const osSemaphoreAttr_t BinSem_DataReady_attributes = {
         .name = "BinSem_DataReady",
 };
+
+osSemaphoreId_t NRFSem_TxHandle;
+const osSemaphoreAttr_t NRFSem_Tx_attributes = {
+        .name = "NRFSem_Tx"
+};
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 extern uint32_t dmaBuffer[2];
 uint16_t adc[4] = {0, 0, 0, 0};
-
+int offset[4] = {0,0,0,0};
 uint8_t txBuffer[16];
 /* USER CODE END PD */
 
@@ -52,7 +60,7 @@ uint8_t txBuffer[16];
 /* USER CODE BEGIN PM */
 /* Creat for LCD*/
 osThreadId_t lcdHandle;
-uint32_t lcdBuffer[128];
+CCMRAM uint32_t lcdBuffer[128];
 osStaticThreadDef_t lcdControlBlock;
 const osThreadAttr_t lcd_attributes = {
         .name = "lcd",
@@ -65,7 +73,7 @@ const osThreadAttr_t lcd_attributes = {
 
 /* Creat for adc */
 osThreadId_t adcHandle;
-uint32_t adcBuffer[128];
+CCMRAM uint32_t adcBuffer[128];
 osStaticThreadDef_t adcControlBlock;
 const osThreadAttr_t adc_attributes = {
         .name = "adc",
@@ -84,15 +92,15 @@ const osThreadAttr_t adc_attributes = {
 /* USER CODE END Variables */
 /* Definitions for main */
 osThreadId_t mainHandle;
-uint32_t mainBuffer[128];
+CCMRAM uint32_t mainBuffer[ 128 ];
 osStaticThreadDef_t mainControlBlock;
 const osThreadAttr_t main_attributes = {
-        .name = "main",
-        .cb_mem = &mainControlBlock,
-        .cb_size = sizeof(mainControlBlock),
-        .stack_mem = &mainBuffer[0],
-        .stack_size = sizeof(mainBuffer),
-        .priority = (osPriority_t) osPriorityNormal,
+  .name = "main",
+  .cb_mem = &mainControlBlock,
+  .cb_size = sizeof(mainControlBlock),
+  .stack_mem = &mainBuffer[0],
+  .stack_size = sizeof(mainBuffer),
+  .priority = (osPriority_t) osPriorityNormal,
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -113,41 +121,43 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
   * @retval None
   */
 void MX_FREERTOS_Init(void) {
-    /* USER CODE BEGIN Init */
+  /* USER CODE BEGIN Init */
 
-    /* USER CODE END Init */
+  /* USER CODE END Init */
 
-    /* USER CODE BEGIN RTOS_MUTEX */
+  /* USER CODE BEGIN RTOS_MUTEX */
     /* add mutexes, ... */
-    /* USER CODE END RTOS_MUTEX */
+  /* USER CODE END RTOS_MUTEX */
 
-    /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
     /* add semaphores, ... */
     BinSem_DataReadyHandle = osSemaphoreNew(1, 1, &BinSem_DataReady_attributes);
-    /* USER CODE END RTOS_SEMAPHORES */
 
-    /* USER CODE BEGIN RTOS_TIMERS */
+    NRFSem_TxHandle = osSemaphoreNew(1,1,&NRFSem_Tx_attributes);
+  /* USER CODE END RTOS_SEMAPHORES */
+
+  /* USER CODE BEGIN RTOS_TIMERS */
     /* start timers, add new ones, ... */
-    /* USER CODE END RTOS_TIMERS */
+  /* USER CODE END RTOS_TIMERS */
 
-    /* USER CODE BEGIN RTOS_QUEUES */
+  /* USER CODE BEGIN RTOS_QUEUES */
     /* add queues, ... */
-    /* USER CODE END RTOS_QUEUES */
+  /* USER CODE END RTOS_QUEUES */
 
-    /* Create the thread(s) */
-    /* creation of main */
-    mainHandle = osThreadNew(App_main, NULL, &main_attributes);
+  /* Create the thread(s) */
+  /* creation of main */
+  mainHandle = osThreadNew(App_main, NULL, &main_attributes);
 
-    /* USER CODE BEGIN RTOS_THREADS */
+  /* USER CODE BEGIN RTOS_THREADS */
     /* add threads, ... */
     lcdHandle = osThreadNew(App_lcd, NULL, &lcd_attributes);
 
     adcHandle = osThreadNew(App_adc, NULL, &adc_attributes);
-    /* USER CODE END RTOS_THREADS */
+  /* USER CODE END RTOS_THREADS */
 
-    /* USER CODE BEGIN RTOS_EVENTS */
+  /* USER CODE BEGIN RTOS_EVENTS */
     /* add events, ... */
-    /* USER CODE END RTOS_EVENTS */
+  /* USER CODE END RTOS_EVENTS */
 
 }
 
@@ -158,33 +168,90 @@ void MX_FREERTOS_Init(void) {
   * @retval None
   */
 /* USER CODE END Header_App_main */
-void App_main(void *argument) {
-    /* USER CODE BEGIN App_main */
+void App_main(void *argument)
+{
+  /* USER CODE BEGIN App_main */
+    FLASH_Read(ADDR_FLASH_SECTOR_5,(uint32_t *)offset,4);
     /* Infinite loop */
     for (;;) {
+        if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_9) == GPIO_PIN_RESET) {
+            FLASH_Write(ADDR_FLASH_SECTOR_5,(uint32_t*)offset,4);
+            if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_9) == GPIO_PIN_RESET) {
+                while (HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_1) == GPIO_PIN_RESET);
+            }
+        }
 
-        vTaskDelay(100);
+        if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_1) == GPIO_PIN_RESET) {
+            offset[0] += 10;
+            if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_1) == GPIO_PIN_RESET) {
+                while (HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_1) == GPIO_PIN_RESET);
+            }
+        }
+
+        if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_2) == GPIO_PIN_RESET) {
+            offset[0] -= 10;
+            if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_2) == GPIO_PIN_RESET) {
+                while (HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_2) == GPIO_PIN_RESET);
+            }
+        }
+
+
+        if(HAL_GPIO_ReadPin(GPIOE,GPIO_PIN_9) == GPIO_PIN_RESET) {
+            offset[1] += 10;
+            if(HAL_GPIO_ReadPin(GPIOE,GPIO_PIN_9) == GPIO_PIN_RESET) {
+                while (HAL_GPIO_ReadPin(GPIOE,GPIO_PIN_9) == GPIO_PIN_RESET);
+            }
+        }
+
+        if(HAL_GPIO_ReadPin(GPIOE,GPIO_PIN_8) == GPIO_PIN_RESET) {
+            offset[1] -= 10;
+            if(HAL_GPIO_ReadPin(GPIOE,GPIO_PIN_8) == GPIO_PIN_RESET) {
+                while (HAL_GPIO_ReadPin(GPIOE,GPIO_PIN_8) == GPIO_PIN_RESET);
+            }
+        }
+
+
+        if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_4) == GPIO_PIN_RESET) {
+            offset[2] -= 10;
+            if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_4) == GPIO_PIN_RESET) {
+                while (HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_4) == GPIO_PIN_RESET);
+            }
+        }
+
+        if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_5) == GPIO_PIN_RESET) {
+            offset[2] += 10;
+            if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_5) == GPIO_PIN_RESET) {
+                while (HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_5) == GPIO_PIN_RESET);
+            }
+        }
+
+        if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_6) == GPIO_PIN_RESET) {
+            offset[3] += 10;
+            if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_6) == GPIO_PIN_RESET) {
+                while (HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_6) == GPIO_PIN_RESET);
+            }
+        }
+
+        if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_7) == GPIO_PIN_RESET) {
+            offset[3] -= 10;
+            if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_7) == GPIO_PIN_RESET) {
+                while (HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_7) == GPIO_PIN_RESET);
+            }
+        }
+
+        vTaskDelay(1);
     }
-    /* USER CODE END App_main */
+  /* USER CODE END App_main */
 }
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
 void App_lcd(void *argument) {
     taskENTER_CRITICAL();
-    LCD_ShowString(30, 0, "LCD display fine", BLACK, WHITE, 24, 1);
+    LCD_ShowPicture3(50,50,5,5,gImage_demo2);
     taskEXIT_CRITICAL();
     while (1) {
-//        adc[0] = BSP_Filter(adc[0], 0.3, 0);
-//        adc[1] = BSP_Filter(adc[1], 0.3, 1);
-//        adc[2] = BSP_Filter(adc[2], 0.3, 2);
-//        adc[3] = BSP_Filter(adc[3], 0.3, 3);
-//        taskENTER_CRITICAL();
-//        LCD_ShowIntNum(30, 50, adc[0], 4, BLACK, WHITE, 24);
-//        LCD_ShowIntNum(30, 50 + 30, adc[1], 4, BLACK, WHITE, 24);
-//        LCD_ShowIntNum(30, 50 + 60, adc[2], 4, BLACK, WHITE, 24);
-//        LCD_ShowIntNum(30, 50 + 90, adc[3], 4, BLACK, WHITE, 24);
-//        taskEXIT_CRITICAL();
+        LCD_DrawPoint(53,58,0x8410);
         vTaskDelay(1);
     }
 }
@@ -197,28 +264,34 @@ void App_adc(void *param) {
     while (1) {
         if (xSemaphoreTake(BinSem_DataReadyHandle, portMAX_DELAY) == pdTRUE) {
             //进行ADC滤波
-            adc[0] = BSP_Filter(adc[0], 0.3f, 0);
-            adc[1] = BSP_Filter(adc[1], 0.3f, 1);
-            adc[2] = BSP_Filter(adc[2], 0.3f, 2);
-            adc[3] = BSP_Filter(adc[3], 0.3f, 3);
+            int adc_temp[4] = {0,0,0,0};
+            uint16_t adc_tx[4] = {0,0,0,0};
 
-            //进行数据发送
-            txBuffer[0] = (uint8_t) adc[0];
-            txBuffer[1] = (uint8_t)(adc[0] >> 8);
+            for(uint8_t i = 0;i < 4;i++) {
+                adc_temp[i] = adc[i];
 
-            txBuffer[2] = (uint8_t) adc[1];
-            txBuffer[3] = (uint8_t)(adc[1] >> 8);
+                adc_temp[i] = BSP_Filter(adc_temp[i],0.35f,i);
 
-            txBuffer[4] = (uint8_t) adc[2];
-            txBuffer[5] = (uint8_t)(adc[2] >> 8);
+                adc_temp[i] += offset[i];
 
-            txBuffer[6] = (uint8_t) adc[3];
-            txBuffer[7] = (uint8_t)(adc[3] >> 8);
+                if(adc_temp[i] >= 4095) {
+                    adc_temp[i] = 4095;
+                }
+                if(adc_temp[i] <= 0) {
+                    adc_temp[i] = 0;
+                }
 
-            taskENTER_CRITICAL();
-            NRF_WriteTxFIFO(txBuffer,16);
-            taskEXIT_CRITICAL();
-            vTaskDelay(1);
+                adc_tx[i] = adc_temp[i];
+
+                txBuffer[2*i] = adc_tx[i];
+                txBuffer[2*i + 1] = (adc_tx[i] >> 8);
+            }
+
+            if(xSemaphoreTake(NRFSem_TxHandle,portMAX_DELAY) == pdTRUE) {
+                taskENTER_CRITICAL();
+                NRF_WriteTxFIFO(txBuffer,16);
+                taskEXIT_CRITICAL();
+            }
         }
     }
 }
@@ -238,6 +311,11 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
     if(GPIO_Pin == GPIO_PIN_0) {
         NRF_TxIRQ();
+        BaseType_t highTaskWoken = pdFALSE;
+        if(NRFSem_TxHandle !=NULL) {
+            xSemaphoreGiveFromISR(NRFSem_TxHandle,&highTaskWoken);
+            portYIELD_FROM_ISR(highTaskWoken);
+        }
     }
 }
 

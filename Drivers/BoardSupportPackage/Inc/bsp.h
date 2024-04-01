@@ -6,6 +6,15 @@
 #define F407_CONTROLLER_BSP_H
 
 #include "main.h"
-uint16_t BSP_Filter(uint16_t adcValue,float k,uint8_t num);
+#include "gpio.h"
+#include "stdio.h"
+
+
+/* @brief 用于ADC滤波的滤波器*/
+int BSP_Filter(int adcValue,float k,uint8_t num);
+
+
+/* @brief 用于微调按键引脚初始化*/
+void BSP_FineTuningKey_GPIO_Init(void);
 
 #endif //F407_CONTROLLER_BSP_H

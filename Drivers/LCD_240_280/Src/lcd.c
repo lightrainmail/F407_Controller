@@ -21,6 +21,16 @@ void LCD_WriteAnyLengthData(uint8_t *pdata,uint16_t len) {
     lcd_interface_write_any_data(pdata,len);
 }
 
+/* @note 这个函数为16bit画图函数设计*/
+void LCD_WriteAnyLength16BitData(uint16_t pdata[],uint16_t len) {
+    uint8_t data[len*2];    //这里可能会栈溢出
+    for(uint16_t i = 0;i < len;i++) {
+        data[2*i] = (pdata[i] >> 8);
+        data[2*i + 1] = pdata[i];
+    }
+    lcd_interface_write_any_data(data,2*len);
+}
+
 void LCD_Delayms(uint32_t delay) {
     lcd_interface_delayms(delay);
 }
@@ -672,6 +682,23 @@ void LCD_ShowPicture(uint16_t x,uint16_t y,uint16_t length,uint16_t width,const 
 		}
 	}
 }
+
+/* @brief 显示图片函数的优化版本*/
+void LCD_ShowPicture2(uint16_t x,uint16_t y,uint16_t length,uint16_t width,const uint8_t pic[]) {
+    //设定显示区域
+    LCD_Address_Set(x,y,x + length - 1,y + width - 1);
+    LCD_WriteAnyLengthData(pic,length*width*2);
+}
+
+/* @brief 显示图片，但是数据是16位*/
+void LCD_ShowPicture3(uint16_t x,uint16_t y,uint16_t length,uint16_t width,const uint16_t pic[]) {
+    //设定显示区域
+    LCD_Address_Set(x,y,x + length - 1,y + width - 1);
+
+    //写入颜色数据
+    LCD_WriteAnyLength16BitData(pic,length*width);
+}
+
 
 /* @brief ????????????????????????
  * @param color ????????*/

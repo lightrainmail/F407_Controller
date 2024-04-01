@@ -472,6 +472,30 @@ Drivers/BoardSupportPackage/Src/bsp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\F407_Controller.elf.dir\build.make CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.s
 .PHONY : Drivers/BoardSupportPackage/Src/bsp.c.s
 
+Drivers/Flash/Src/flash.obj: Drivers/Flash/Src/flash.c.obj
+.PHONY : Drivers/Flash/Src/flash.obj
+
+# target to build an object file
+Drivers/Flash/Src/flash.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\F407_Controller.elf.dir\build.make CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
+.PHONY : Drivers/Flash/Src/flash.c.obj
+
+Drivers/Flash/Src/flash.i: Drivers/Flash/Src/flash.c.i
+.PHONY : Drivers/Flash/Src/flash.i
+
+# target to preprocess a source file
+Drivers/Flash/Src/flash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\F407_Controller.elf.dir\build.make CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.i
+.PHONY : Drivers/Flash/Src/flash.c.i
+
+Drivers/Flash/Src/flash.s: Drivers/Flash/Src/flash.c.s
+.PHONY : Drivers/Flash/Src/flash.s
+
+# target to generate assembly for a file
+Drivers/Flash/Src/flash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\F407_Controller.elf.dir\build.make CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.s
+.PHONY : Drivers/Flash/Src/flash.c.s
+
 Drivers/LCD_240_280/Src/lcd.obj: Drivers/LCD_240_280/Src/lcd.c.obj
 .PHONY : Drivers/LCD_240_280/Src/lcd.obj
 
@@ -1316,6 +1340,9 @@ help:
 	@echo ... Drivers/BoardSupportPackage/Src/bsp.obj
 	@echo ... Drivers/BoardSupportPackage/Src/bsp.i
 	@echo ... Drivers/BoardSupportPackage/Src/bsp.s
+	@echo ... Drivers/Flash/Src/flash.obj
+	@echo ... Drivers/Flash/Src/flash.i
+	@echo ... Drivers/Flash/Src/flash.s
 	@echo ... Drivers/LCD_240_280/Src/lcd.obj
 	@echo ... Drivers/LCD_240_280/Src/lcd.i
 	@echo ... Drivers/LCD_240_280/Src/lcd.s

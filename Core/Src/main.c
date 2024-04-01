@@ -29,6 +29,7 @@
 /* USER CODE BEGIN Includes */
 #include "lcd.h"
 #include "nrf.h"
+#include "bsp.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -101,6 +102,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
     LCD_Init(WHITE);
     NRF_GPIO_Init();
+    BSP_FineTuningKey_GPIO_Init();
     //启动ADC
     HAL_ADCEx_MultiModeStart_DMA(&hadc1,dmaBuffer,2);
     HAL_ADCEx_MultiModeStart_DMA(&hadc2,dmaBuffer,2);

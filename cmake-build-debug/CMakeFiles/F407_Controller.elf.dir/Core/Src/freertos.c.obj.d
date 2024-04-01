@@ -81,9 +81,11 @@ CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj: \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Core\Inc/main.h \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\LCD_240_280\Inc/lcd.h \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\BoardSupportPackage\Inc/bsp.h \
+ C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Core\Inc/gpio.h \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Middlewares\Third_Party\FreeRTOS\Source\include/semphr.h \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Middlewares\Third_Party\FreeRTOS\Source\include/queue.h \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Middlewares\Third_Party\FreeRTOS\Source\include/task.h \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\NRF\Inc/nrf.h \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\NRF\Inc/nrf_interface.h \
- C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Core\Inc/gpio.h
+ C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\Flash\Inc/flash.h \
+ C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\LCD_240_280\Inc/pic.h

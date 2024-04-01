@@ -27,6 +27,12 @@ void LCD_ShowFloatNumber(uint16_t x,uint16_t y,float num,uint8_t len,uint16_t fc
 
 void LCD_ShowPicture(uint16_t x,uint16_t y,uint16_t length,uint16_t width,const uint8_t pic[]);//显示图片
 
+/* @brief 显示图片函数的优化版本*/
+void LCD_ShowPicture2(uint16_t x,uint16_t y,uint16_t length,uint16_t width,const uint8_t pic[]);
+
+/* @brief 显示图片，但是数据是16位*/
+void LCD_ShowPicture3(uint16_t x,uint16_t y,uint16_t length,uint16_t width,const uint16_t pic[]);
+
 void LCD_FastFill(uint16_t color);
 
 void LCD_ShowHexNum(uint16_t x,uint16_t y,uint32_t num,uint8_t len,uint16_t fc,uint16_t bc,uint8_t sizey,uint8_t mode);

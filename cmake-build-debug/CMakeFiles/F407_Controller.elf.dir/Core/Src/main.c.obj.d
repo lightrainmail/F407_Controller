@@ -85,4 +85,5 @@ CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj: \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\LCD_240_280\Inc/lcd_interface.h \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\LCD_240_280\Inc/lcd.h \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\NRF\Inc/nrf.h \
- C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\NRF\Inc/nrf_interface.h
+ C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\NRF\Inc/nrf_interface.h \
+ C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\BoardSupportPackage\Inc/bsp.h
