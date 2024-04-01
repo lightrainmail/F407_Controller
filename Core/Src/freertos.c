@@ -31,6 +31,7 @@
 #include "nrf.h"
 #include "flash.h"
 #include "pic.h"
+#include "stdio.h"
 #include "math.h"
 /* USER CODE END Includes */
 
@@ -172,11 +173,11 @@ void MX_FREERTOS_Init(void) {
 void App_main(void *argument)
 {
   /* USER CODE BEGIN App_main */
-    FLASH_Read(ADDR_FLASH_SECTOR_5,(uint32_t *)offset,4);
+    FLASH_Read(ADDR_FLASH_SECTOR_10,(uint32_t *)offset,4);
     /* Infinite loop */
     for (;;) {
         if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_9) == GPIO_PIN_RESET) {
-            FLASH_Write(ADDR_FLASH_SECTOR_5,(uint32_t*)offset,4);
+            FLASH_Write(ADDR_FLASH_SECTOR_10,(uint32_t*)offset,4);
             if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_9) == GPIO_PIN_RESET) {
                 while (HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_1) == GPIO_PIN_RESET);
             }
@@ -248,17 +249,22 @@ void App_main(void *argument)
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
 CCMRAM uint8_t DisplayBuffer[7372];
+CCMRAM uint16_t DisPlayBuffer2[10000];
 void App_lcd(void *argument) {
     //显示背景
     taskENTER_CRITICAL();
     LCD_ShowPicture2(30,0,180,48,gImage_Title1);
     LCD_ShowPicture2(5,48,60,16,gImage_Title2);
     LCD_ShowPicture2(19,66,27,190,gImage_KeDu);
-    LCD_ShowPicture2(120,101,100,100,gImage_JuXing);
+    LCD_ShowPicture2(69,79,160,160,gImage_WeiTiaoBG);
     taskEXIT_CRITICAL();
 
     for(uint16_t i = 0;i < 7372;i++) {
         DisplayBuffer[i] = gImage_Buffer[i];
+    }
+
+    for(uint16_t i = 0;i < 10000;i++) {
+        DisPlayBuffer2[i] = (gImage_JuXing[2*i] << 8) | (gImage_JuXing[2*i+1]);
     }
 
     uint16_t y = 0;
@@ -267,19 +273,24 @@ void App_lcd(void *argument) {
 
     while (1) {
         y = -180*adc[0]/4095 + 180;
-
         num = 38*y;
 
+        //擦除旧箭头
         for(uint16_t i = 0; i < 532;i++) {
             DisplayBuffer[num_old + i] = 0xFF;
         }
 
+        //画新箭头
         for(uint16_t i = 0;i < 532;i++) {
             DisplayBuffer[num + i] = gImage_JianTou[i];
         }
 
         taskENTER_CRITICAL();
         LCD_ShowPicture2(45,65,19,194,DisplayBuffer);
+        LCD_ShowIntNumber(160,89,offset[2] + 1,2,BLACK,WHITE,24);
+        LCD_ShowIntNumber(160,129,offset[3] + 1,2,BLACK,WHITE,24);
+        LCD_ShowIntNumber(160,167,offset[0] + 1,2,BLACK,WHITE,24);
+        LCD_ShowIntNumber(160,204,offset[1] + 1,2,BLACK,WHITE,24);
         taskEXIT_CRITICAL();
 
         num_old = num;

@@ -608,7 +608,19 @@ void LCD_ShowIntNum(uint16_t x,uint16_t y,uint16_t num,uint8_t len,uint16_t fc,u
 		}
 	 	LCD_ShowChar(x+t*sizex,y,temp+48,fc,bc,sizey,0);
 	}
-} 
+}
+
+/* @brief 显示完整带符号的整形变量*/
+void LCD_ShowIntNumber(uint16_t x,uint16_t y,int num,uint8_t len,uint16_t fc,uint16_t bc,uint8_t sizey) {
+    if(num >= 0) {
+        LCD_ShowChar(x,y,' ',fc,bc,sizey,0);
+        LCD_ShowIntNum(x + sizey/2,y,(uint16_t)num,len,fc,bc,sizey);
+    }
+    else {
+        LCD_ShowChar(x,y,'-',fc,bc,sizey,0);
+        LCD_ShowIntNum(x + sizey/2,y,(uint16_t)(-num),len,fc,bc,sizey);
+    }
+}
 
 
 /******************************************************************************
