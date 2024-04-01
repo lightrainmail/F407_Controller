@@ -88,4 +88,5 @@ CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj: \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\NRF\Inc/nrf.h \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\NRF\Inc/nrf_interface.h \
  C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\Flash\Inc/flash.h \
- C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\LCD_240_280\Inc/pic.h
+ C:\Users\light\OneDrive\STM32F407VET6\F407_Controller\Drivers\LCD_240_280\Inc/pic.h \
+ c:\progra~1\gcc-ar~1.10\arm-none-eabi\include\math.h

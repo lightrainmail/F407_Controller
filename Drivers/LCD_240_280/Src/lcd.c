@@ -690,7 +690,8 @@ void LCD_ShowPicture2(uint16_t x,uint16_t y,uint16_t length,uint16_t width,const
     LCD_WriteAnyLengthData(pic,length*width*2);
 }
 
-/* @brief 显示图片，但是数据是16位*/
+/* @brief 显示图片，但是数据是16位
+ * @note pic 的长度必须小于65536/2*/
 void LCD_ShowPicture3(uint16_t x,uint16_t y,uint16_t length,uint16_t width,const uint16_t pic[]) {
     //设定显示区域
     LCD_Address_Set(x,y,x + length - 1,y + width - 1);

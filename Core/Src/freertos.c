@@ -31,6 +31,7 @@
 #include "nrf.h"
 #include "flash.h"
 #include "pic.h"
+#include "math.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -246,12 +247,42 @@ void App_main(void *argument)
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
+CCMRAM uint8_t DisplayBuffer[7372];
 void App_lcd(void *argument) {
+    //显示背景
     taskENTER_CRITICAL();
-    LCD_ShowPicture3(50,50,5,5,gImage_demo2);
+    LCD_ShowPicture2(30,0,180,48,gImage_Title1);
+    LCD_ShowPicture2(5,48,60,16,gImage_Title2);
+    LCD_ShowPicture2(19,66,27,190,gImage_KeDu);
+    LCD_ShowPicture2(120,101,100,100,gImage_JuXing);
     taskEXIT_CRITICAL();
+
+    for(uint16_t i = 0;i < 7372;i++) {
+        DisplayBuffer[i] = gImage_Buffer[i];
+    }
+
+    uint16_t y = 0;
+    uint16_t num = 0;
+    uint16_t num_old = 0;
+
     while (1) {
-        LCD_DrawPoint(53,58,0x8410);
+        y = -180*adc[0]/4095 + 180;
+
+        num = 38*y;
+
+        for(uint16_t i = 0; i < 532;i++) {
+            DisplayBuffer[num_old + i] = 0xFF;
+        }
+
+        for(uint16_t i = 0;i < 532;i++) {
+            DisplayBuffer[num + i] = gImage_JianTou[i];
+        }
+
+        taskENTER_CRITICAL();
+        LCD_ShowPicture2(45,65,19,194,DisplayBuffer);
+        taskEXIT_CRITICAL();
+
+        num_old = num;
         vTaskDelay(1);
     }
 }

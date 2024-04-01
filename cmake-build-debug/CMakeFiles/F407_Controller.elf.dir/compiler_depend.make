@@ -150,6 +150,7 @@ CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj: C:/Users/light/OneDr
   C:/Program\ Files/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
   C:/Program\ Files/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
   C:/Program\ Files/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+  C:/Program\ Files/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/math.h \
   C:/Program\ Files/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
   C:/Program\ Files/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
   C:/Program\ Files/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
@@ -2196,6 +2197,8 @@ C:/Program\ Files/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/e
 C:/Program\ Files/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h:
 
 C:/Program\ Files/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h:
+
+C:/Program\ Files/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/math.h:
 
 C:/Program\ Files/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h:
 
