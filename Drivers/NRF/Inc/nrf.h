@@ -38,7 +38,7 @@ typedef enum {
 #define NRF_AirDataSpeed _1Mbps
 
 //下面这个宏用于设定发送接收的字节数
-#define NRF_AirDataBytes    16
+#define NRF_AirDataBytes    8
 
 //下面这个宏用于设定NRF工作的通信频率，以MHz为单位，频率范围在2400MHz到2525MHz之间
 #define NRF_Frequency   2500

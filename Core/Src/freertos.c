@@ -53,9 +53,9 @@ const osSemaphoreAttr_t NRFSem_Tx_attributes = {
 /* USER CODE BEGIN PD */
 
 extern uint32_t dmaBuffer[2];
-uint16_t adc[4] = {0, 0, 0, 0};
-int offset[4] = {0,0,0,0};
-uint8_t txBuffer[16];
+CCMRAM uint16_t adc[4] = {0, 0, 0, 0};
+CCMRAM int offset[4] = {0,0,0,0};
+CCMRAM uint8_t txBuffer[NRF_AirDataBytes];
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -83,7 +83,7 @@ const osThreadAttr_t adc_attributes = {
         .cb_size = sizeof(adcControlBlock),
         .stack_mem = adcBuffer,
         .stack_size = sizeof(adcBuffer),
-        .priority = (osPriority_t) osPriorityNormal,
+        .priority = (osPriority_t) osPriorityHigh,
 };
 
 /* USER CODE END PM */
@@ -173,12 +173,16 @@ void MX_FREERTOS_Init(void) {
 void App_main(void *argument)
 {
   /* USER CODE BEGIN App_main */
+    taskENTER_CRITICAL();
     FLASH_Read(ADDR_FLASH_SECTOR_10,(uint32_t *)offset,4);
+    taskEXIT_CRITICAL();
     /* Infinite loop */
     for (;;) {
         if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_9) == GPIO_PIN_RESET) {
+            taskENTER_CRITICAL();
             FLASH_Write(ADDR_FLASH_SECTOR_10,(uint32_t*)offset,4);
-            if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_9) == GPIO_PIN_RESET) {
+            taskEXIT_CRITICAL();
+            if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_10) == GPIO_PIN_RESET) {
                 while (HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_1) == GPIO_PIN_RESET);
             }
         }
@@ -287,10 +291,10 @@ void App_lcd(void *argument) {
 
         taskENTER_CRITICAL();
         LCD_ShowPicture2(45,65,19,194,DisplayBuffer);
-        LCD_ShowIntNumber(160,89,offset[2] + 1,2,BLACK,WHITE,24);
-        LCD_ShowIntNumber(160,129,offset[3] + 1,2,BLACK,WHITE,24);
-        LCD_ShowIntNumber(160,167,offset[0] + 1,2,BLACK,WHITE,24);
-        LCD_ShowIntNumber(160,204,offset[1] + 1,2,BLACK,WHITE,24);
+        LCD_ShowIntNumber(160,89,offset[2] + 1,3,BLACK,WHITE,24);
+        LCD_ShowIntNumber(160,129,offset[3] + 1,3,BLACK,WHITE,24);
+        LCD_ShowIntNumber(160,167,offset[0] + 1,3,BLACK,WHITE,24);
+        LCD_ShowIntNumber(160,204,offset[1] + 1,3,BLACK,WHITE,24);
         taskEXIT_CRITICAL();
 
         num_old = num;
@@ -331,9 +335,10 @@ void App_adc(void *param) {
 
             if(xSemaphoreTake(NRFSem_TxHandle,portMAX_DELAY) == pdTRUE) {
                 taskENTER_CRITICAL();
-                NRF_WriteTxFIFO(txBuffer,16);
+                NRF_WriteTxFIFO(txBuffer,NRF_AirDataBytes);
                 taskEXIT_CRITICAL();
             }
+//            vTaskDelay(1);
         }
     }
 }

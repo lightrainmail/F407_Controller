@@ -804,8 +804,8 @@ void LCD_Init(uint16_t color) {
 	LCD_WriteCommand(0x29);
 
     //????????,??????????????
-    LCD_Fill(0,0,LCD_W,LCD_H,color);
-//    LCD_FastFill(color);
+//    LCD_Fill(0,0,LCD_W,LCD_H,color);
+    LCD_FastFill(color);
 } 
 
 /* @brief 用于将RGB颜色转换成RGB565结构的16位颜色*/

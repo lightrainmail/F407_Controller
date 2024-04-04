@@ -156,8 +156,8 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
  .text.LCD_WriteAnyLength16BitData
                 0x00000000       0x42 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
- .text.LCD_FastFill
-                0x00000000        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+ .text.LCD_Fill
+                0x00000000       0x3c CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
  .text.LCD_DrawLine
                 0x00000000       0xa4 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
  .text.LCD_DrawRectangle
@@ -207,9 +207,6 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
  .text.lcd_interface_blk_clr
                 0x00000000       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
- .text.lcd_interface_fast_fill_color
-                0x00000000       0x6c CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
- .bss.Data.0    0x00000000     0x8340 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
  .text          0x00000000        0x0 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
  .data          0x00000000        0x0 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
  .bss           0x00000000        0x0 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
@@ -1670,7 +1667,7 @@ LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/
                 0x08000000                g_pfnVectors
                 0x08000188                . = ALIGN (0x4)
 
-.text           0x08000190     0x6ad0
+.text           0x08000190     0x6b10
                 0x08000190                . = ALIGN (0x4)
  *(.text)
  .text          0x08000190       0x40 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -1697,962 +1694,966 @@ LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/
                 0x0800082c       0x34 CMakeFiles/F407_Controller.elf.dir/Core/Src/dma.c.obj
                 0x0800082c                MX_DMA_Init
  .text.App_main
-                0x08000860      0x214 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08000860      0x224 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
                 0x08000860                App_main
- .text.App_lcd  0x08000a74      0x1a4 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x08000a74                App_lcd
- .text.App_adc  0x08000c18       0xf0 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x08000c18                App_adc
+ .text.App_lcd  0x08000a84      0x1a0 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08000a84                App_lcd
+ .text.App_adc  0x08000c24       0xf0 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08000c24                App_adc
  .text.MX_FREERTOS_Init
-                0x08000d08       0x80 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x08000d08                MX_FREERTOS_Init
+                0x08000d14       0x80 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08000d14                MX_FREERTOS_Init
  .text.HAL_ADC_ConvCpltCallback
-                0x08000d88       0x54 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x08000d88                HAL_ADC_ConvCpltCallback
+                0x08000d94       0x54 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08000d94                HAL_ADC_ConvCpltCallback
  .text.HAL_GPIO_EXTI_Callback
-                0x08000ddc       0x40 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x08000ddc                HAL_GPIO_EXTI_Callback
+                0x08000de8       0x40 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08000de8                HAL_GPIO_EXTI_Callback
  .text.MX_GPIO_Init
-                0x08000e1c       0x90 CMakeFiles/F407_Controller.elf.dir/Core/Src/gpio.c.obj
-                0x08000e1c                MX_GPIO_Init
+                0x08000e28       0x90 CMakeFiles/F407_Controller.elf.dir/Core/Src/gpio.c.obj
+                0x08000e28                MX_GPIO_Init
  .text.HAL_TIM_PeriodElapsedCallback
-                0x08000eac       0x18 CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
-                0x08000eac                HAL_TIM_PeriodElapsedCallback
+                0x08000eb8       0x18 CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
+                0x08000eb8                HAL_TIM_PeriodElapsedCallback
  .text.Error_Handler
-                0x08000ec4        0x4 CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
-                0x08000ec4                Error_Handler
+                0x08000ed0        0x4 CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
+                0x08000ed0                Error_Handler
  .text.SystemClock_Config
-                0x08000ec8       0xa4 CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
-                0x08000ec8                SystemClock_Config
- .text.main     0x08000f6c       0x70 CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
-                0x08000f6c                main
+                0x08000ed4       0xa4 CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
+                0x08000ed4                SystemClock_Config
+ .text.main     0x08000f78       0x70 CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
+                0x08000f78                main
  .text.MX_SPI1_Init
-                0x08000fdc       0x40 CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
-                0x08000fdc                MX_SPI1_Init
+                0x08000fe8       0x40 CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
+                0x08000fe8                MX_SPI1_Init
  .text.MX_SPI3_Init
-                0x0800101c       0x44 CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
-                0x0800101c                MX_SPI3_Init
+                0x08001028       0x44 CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
+                0x08001028                MX_SPI3_Init
  .text.HAL_SPI_MspInit
-                0x08001060       0xc8 CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
-                0x08001060                HAL_SPI_MspInit
+                0x0800106c       0xc8 CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
+                0x0800106c                HAL_SPI_MspInit
  .text.HAL_MspInit
-                0x08001128       0x44 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08001128                HAL_MspInit
+                0x08001134       0x44 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08001134                HAL_MspInit
  .text.HAL_InitTick
-                0x0800116c       0xa4 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
-                0x0800116c                HAL_InitTick
+                0x08001178       0xa4 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
+                0x08001178                HAL_InitTick
  .text.NMI_Handler
-                0x08001210        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08001210                NMI_Handler
+                0x0800121c        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0800121c                NMI_Handler
  .text.HardFault_Handler
-                0x08001212        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08001212                HardFault_Handler
+                0x0800121e        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0800121e                HardFault_Handler
  .text.MemManage_Handler
-                0x08001214        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08001214                MemManage_Handler
+                0x08001220        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001220                MemManage_Handler
  .text.BusFault_Handler
-                0x08001216        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08001216                BusFault_Handler
+                0x08001222        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001222                BusFault_Handler
  .text.UsageFault_Handler
-                0x08001218        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08001218                UsageFault_Handler
+                0x08001224        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001224                UsageFault_Handler
  .text.DebugMon_Handler
-                0x0800121a        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x0800121a                DebugMon_Handler
+                0x08001226        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001226                DebugMon_Handler
  .text.EXTI0_IRQHandler
-                0x0800121c        0xa CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x0800121c                EXTI0_IRQHandler
- *fill*         0x08001226        0x2 
+                0x08001228        0xa CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001228                EXTI0_IRQHandler
+ *fill*         0x08001232        0x2 
  .text.TIM8_TRG_COM_TIM14_IRQHandler
-                0x08001228       0x10 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08001228                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08001234       0x10 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001234                TIM8_TRG_COM_TIM14_IRQHandler
  .text.DMA2_Stream0_IRQHandler
-                0x08001238       0x10 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08001238                DMA2_Stream0_IRQHandler
+                0x08001244       0x10 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001244                DMA2_Stream0_IRQHandler
  .text.SystemInit
-                0x08001248       0x14 CMakeFiles/F407_Controller.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08001248                SystemInit
+                0x08001254       0x14 CMakeFiles/F407_Controller.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x08001254                SystemInit
  .text.MX_TIM3_Init
-                0x0800125c       0x70 CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj
-                0x0800125c                MX_TIM3_Init
+                0x08001268       0x70 CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj
+                0x08001268                MX_TIM3_Init
  .text.HAL_TIM_Base_MspInit
-                0x080012cc       0x30 CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj
-                0x080012cc                HAL_TIM_Base_MspInit
+                0x080012d8       0x30 CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj
+                0x080012d8                HAL_TIM_Base_MspInit
  .text.Reset_Handler
-                0x080012fc       0x50 CMakeFiles/F407_Controller.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj
-                0x080012fc                Reset_Handler
+                0x08001308       0x50 CMakeFiles/F407_Controller.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj
+                0x08001308                Reset_Handler
  .text.Default_Handler
-                0x0800134c        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj
-                0x0800134c                RTC_Alarm_IRQHandler
-                0x0800134c                HASH_RNG_IRQHandler
-                0x0800134c                EXTI2_IRQHandler
-                0x0800134c                TIM8_CC_IRQHandler
-                0x0800134c                TIM1_CC_IRQHandler
-                0x0800134c                DMA2_Stream5_IRQHandler
-                0x0800134c                DMA1_Stream5_IRQHandler
-                0x0800134c                PVD_IRQHandler
-                0x0800134c                SDIO_IRQHandler
-                0x0800134c                TAMP_STAMP_IRQHandler
-                0x0800134c                CAN2_RX1_IRQHandler
-                0x0800134c                EXTI3_IRQHandler
-                0x0800134c                TIM1_UP_TIM10_IRQHandler
-                0x0800134c                TIM8_UP_TIM13_IRQHandler
-                0x0800134c                I2C3_ER_IRQHandler
-                0x0800134c                I2C2_EV_IRQHandler
-                0x0800134c                DMA1_Stream2_IRQHandler
-                0x0800134c                CAN1_RX0_IRQHandler
-                0x0800134c                FPU_IRQHandler
-                0x0800134c                OTG_HS_WKUP_IRQHandler
-                0x0800134c                CAN2_SCE_IRQHandler
-                0x0800134c                DMA2_Stream2_IRQHandler
-                0x0800134c                SPI1_IRQHandler
-                0x0800134c                TIM6_DAC_IRQHandler
-                0x0800134c                TIM1_BRK_TIM9_IRQHandler
-                0x0800134c                DCMI_IRQHandler
-                0x0800134c                CAN2_RX0_IRQHandler
-                0x0800134c                DMA2_Stream3_IRQHandler
-                0x0800134c                USART6_IRQHandler
-                0x0800134c                USART3_IRQHandler
-                0x0800134c                CAN1_RX1_IRQHandler
-                0x0800134c                UART5_IRQHandler
-                0x0800134c                TIM4_IRQHandler
-                0x0800134c                I2C1_EV_IRQHandler
-                0x0800134c                DMA1_Stream6_IRQHandler
-                0x0800134c                DMA1_Stream1_IRQHandler
-                0x0800134c                UART4_IRQHandler
-                0x0800134c                TIM3_IRQHandler
-                0x0800134c                RCC_IRQHandler
-                0x0800134c                TIM8_BRK_TIM12_IRQHandler
-                0x0800134c                Default_Handler
-                0x0800134c                EXTI15_10_IRQHandler
-                0x0800134c                ADC_IRQHandler
-                0x0800134c                DMA1_Stream7_IRQHandler
-                0x0800134c                TIM7_IRQHandler
-                0x0800134c                CAN2_TX_IRQHandler
-                0x0800134c                TIM5_IRQHandler
-                0x0800134c                DMA2_Stream7_IRQHandler
-                0x0800134c                I2C3_EV_IRQHandler
-                0x0800134c                EXTI9_5_IRQHandler
-                0x0800134c                RTC_WKUP_IRQHandler
-                0x0800134c                ETH_WKUP_IRQHandler
-                0x0800134c                SPI2_IRQHandler
-                0x0800134c                OTG_HS_EP1_IN_IRQHandler
-                0x0800134c                DMA1_Stream0_IRQHandler
-                0x0800134c                CAN1_TX_IRQHandler
-                0x0800134c                EXTI4_IRQHandler
-                0x0800134c                FSMC_IRQHandler
-                0x0800134c                ETH_IRQHandler
-                0x0800134c                OTG_HS_EP1_OUT_IRQHandler
-                0x0800134c                WWDG_IRQHandler
-                0x0800134c                TIM2_IRQHandler
-                0x0800134c                OTG_FS_WKUP_IRQHandler
-                0x0800134c                TIM1_TRG_COM_TIM11_IRQHandler
-                0x0800134c                OTG_HS_IRQHandler
-                0x0800134c                EXTI1_IRQHandler
-                0x0800134c                USART2_IRQHandler
-                0x0800134c                I2C2_ER_IRQHandler
-                0x0800134c                DMA2_Stream1_IRQHandler
-                0x0800134c                CAN1_SCE_IRQHandler
-                0x0800134c                FLASH_IRQHandler
-                0x0800134c                DMA2_Stream4_IRQHandler
-                0x0800134c                USART1_IRQHandler
-                0x0800134c                OTG_FS_IRQHandler
-                0x0800134c                SPI3_IRQHandler
-                0x0800134c                DMA1_Stream4_IRQHandler
-                0x0800134c                I2C1_ER_IRQHandler
-                0x0800134c                DMA2_Stream6_IRQHandler
-                0x0800134c                DMA1_Stream3_IRQHandler
- *fill*         0x0800134e        0x2 
+                0x08001358        0x2 CMakeFiles/F407_Controller.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj
+                0x08001358                RTC_Alarm_IRQHandler
+                0x08001358                HASH_RNG_IRQHandler
+                0x08001358                EXTI2_IRQHandler
+                0x08001358                TIM8_CC_IRQHandler
+                0x08001358                TIM1_CC_IRQHandler
+                0x08001358                DMA2_Stream5_IRQHandler
+                0x08001358                DMA1_Stream5_IRQHandler
+                0x08001358                PVD_IRQHandler
+                0x08001358                SDIO_IRQHandler
+                0x08001358                TAMP_STAMP_IRQHandler
+                0x08001358                CAN2_RX1_IRQHandler
+                0x08001358                EXTI3_IRQHandler
+                0x08001358                TIM1_UP_TIM10_IRQHandler
+                0x08001358                TIM8_UP_TIM13_IRQHandler
+                0x08001358                I2C3_ER_IRQHandler
+                0x08001358                I2C2_EV_IRQHandler
+                0x08001358                DMA1_Stream2_IRQHandler
+                0x08001358                CAN1_RX0_IRQHandler
+                0x08001358                FPU_IRQHandler
+                0x08001358                OTG_HS_WKUP_IRQHandler
+                0x08001358                CAN2_SCE_IRQHandler
+                0x08001358                DMA2_Stream2_IRQHandler
+                0x08001358                SPI1_IRQHandler
+                0x08001358                TIM6_DAC_IRQHandler
+                0x08001358                TIM1_BRK_TIM9_IRQHandler
+                0x08001358                DCMI_IRQHandler
+                0x08001358                CAN2_RX0_IRQHandler
+                0x08001358                DMA2_Stream3_IRQHandler
+                0x08001358                USART6_IRQHandler
+                0x08001358                USART3_IRQHandler
+                0x08001358                CAN1_RX1_IRQHandler
+                0x08001358                UART5_IRQHandler
+                0x08001358                TIM4_IRQHandler
+                0x08001358                I2C1_EV_IRQHandler
+                0x08001358                DMA1_Stream6_IRQHandler
+                0x08001358                DMA1_Stream1_IRQHandler
+                0x08001358                UART4_IRQHandler
+                0x08001358                TIM3_IRQHandler
+                0x08001358                RCC_IRQHandler
+                0x08001358                TIM8_BRK_TIM12_IRQHandler
+                0x08001358                Default_Handler
+                0x08001358                EXTI15_10_IRQHandler
+                0x08001358                ADC_IRQHandler
+                0x08001358                DMA1_Stream7_IRQHandler
+                0x08001358                TIM7_IRQHandler
+                0x08001358                CAN2_TX_IRQHandler
+                0x08001358                TIM5_IRQHandler
+                0x08001358                DMA2_Stream7_IRQHandler
+                0x08001358                I2C3_EV_IRQHandler
+                0x08001358                EXTI9_5_IRQHandler
+                0x08001358                RTC_WKUP_IRQHandler
+                0x08001358                ETH_WKUP_IRQHandler
+                0x08001358                SPI2_IRQHandler
+                0x08001358                OTG_HS_EP1_IN_IRQHandler
+                0x08001358                DMA1_Stream0_IRQHandler
+                0x08001358                CAN1_TX_IRQHandler
+                0x08001358                EXTI4_IRQHandler
+                0x08001358                FSMC_IRQHandler
+                0x08001358                ETH_IRQHandler
+                0x08001358                OTG_HS_EP1_OUT_IRQHandler
+                0x08001358                WWDG_IRQHandler
+                0x08001358                TIM2_IRQHandler
+                0x08001358                OTG_FS_WKUP_IRQHandler
+                0x08001358                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08001358                OTG_HS_IRQHandler
+                0x08001358                EXTI1_IRQHandler
+                0x08001358                USART2_IRQHandler
+                0x08001358                I2C2_ER_IRQHandler
+                0x08001358                DMA2_Stream1_IRQHandler
+                0x08001358                CAN1_SCE_IRQHandler
+                0x08001358                FLASH_IRQHandler
+                0x08001358                DMA2_Stream4_IRQHandler
+                0x08001358                USART1_IRQHandler
+                0x08001358                OTG_FS_IRQHandler
+                0x08001358                SPI3_IRQHandler
+                0x08001358                DMA1_Stream4_IRQHandler
+                0x08001358                I2C1_ER_IRQHandler
+                0x08001358                DMA2_Stream6_IRQHandler
+                0x08001358                DMA1_Stream3_IRQHandler
+ *fill*         0x0800135a        0x2 
  .text.BSP_Filter
-                0x08001350       0x3c CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj
-                0x08001350                BSP_Filter
+                0x0800135c       0x3c CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj
+                0x0800135c                BSP_Filter
  .text.BSP_FineTuningKey_GPIO_Init
-                0x0800138c       0xdc CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj
-                0x0800138c                BSP_FineTuningKey_GPIO_Init
+                0x08001398       0xdc CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj
+                0x08001398                BSP_FineTuningKey_GPIO_Init
  .text.FLASH_GetFlashSector
-                0x08001468       0x8c CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
-                0x08001468                FLASH_GetFlashSector
+                0x08001474       0x8c CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
+                0x08001474                FLASH_GetFlashSector
  .text.STMFLASH_ReadWord
-                0x080014f4        0x4 CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
-                0x080014f4                STMFLASH_ReadWord
+                0x08001500        0x4 CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
+                0x08001500                STMFLASH_ReadWord
  .text.FLASH_Write
-                0x080014f8       0x9c CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
-                0x080014f8                FLASH_Write
+                0x08001504       0x9c CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
+                0x08001504                FLASH_Write
  .text.FLASH_Read
-                0x08001594       0x20 CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
-                0x08001594                FLASH_Read
+                0x080015a0       0x20 CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
+                0x080015a0                FLASH_Read
  .text.LCD_Write8BitData
-                0x080015b4        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x080015b4                LCD_Write8BitData
+                0x080015c0        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x080015c0                LCD_Write8BitData
  .text.LCD_Write16BitData
-                0x080015bc        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x080015bc                LCD_Write16BitData
+                0x080015c8        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x080015c8                LCD_Write16BitData
  .text.LCD_WriteCommand
-                0x080015c4       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x080015c4                LCD_WriteCommand
+                0x080015d0       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x080015d0                LCD_WriteCommand
  .text.LCD_WriteAnyLengthData
-                0x080015d8        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x080015d8                LCD_WriteAnyLengthData
+                0x080015e4        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x080015e4                LCD_WriteAnyLengthData
  .text.LCD_Delayms
-                0x080015e0        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x080015e0                LCD_Delayms
+                0x080015ec        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x080015ec                LCD_Delayms
  .text.LCD_Address_Set
-                0x080015e8       0x3e CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x080015e8                LCD_Address_Set
- .text.LCD_Fill
-                0x08001626       0x3c CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x08001626                LCD_Fill
+                0x080015f4       0x3e CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x080015f4                LCD_Address_Set
+ .text.LCD_FastFill
+                0x08001632        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x08001632                LCD_FastFill
  .text.LCD_DrawPoint
-                0x08001662       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x08001662                LCD_DrawPoint
- *fill*         0x08001676        0x2 
+                0x0800163a       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x0800163a                LCD_DrawPoint
+ *fill*         0x0800164e        0x2 
  .text.LCD_ShowChar
-                0x08001678      0x13c CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x08001678                LCD_ShowChar
- .text.mypow    0x080017b4       0x16 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x080017b4                mypow
- *fill*         0x080017ca        0x2 
+                0x08001650      0x13c CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x08001650                LCD_ShowChar
+ .text.mypow    0x0800178c       0x16 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x0800178c                mypow
+ *fill*         0x080017a2        0x2 
  .text.LCD_ShowIntNum
-                0x080017cc       0xac CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x080017cc                LCD_ShowIntNum
+                0x080017a4       0xac CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x080017a4                LCD_ShowIntNum
  .text.LCD_ShowIntNumber
-                0x08001878       0x84 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x08001878                LCD_ShowIntNumber
+                0x08001850       0x84 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x08001850                LCD_ShowIntNumber
  .text.LCD_ShowPicture2
-                0x080018fc       0x32 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x080018fc                LCD_ShowPicture2
+                0x080018d4       0x32 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x080018d4                LCD_ShowPicture2
  .text.LCD_Init
-                0x0800192e      0x19e CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x0800192e                LCD_Init
+                0x08001906      0x190 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x08001906                LCD_Init
+ *fill*         0x08001a96        0x2 
  .text.lcd_interface_gpio_init
-                0x08001acc       0xcc CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
-                0x08001acc                lcd_interface_gpio_init
+                0x08001a98       0xcc CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001a98                lcd_interface_gpio_init
  .text.lcd_interface_delayms
-                0x08001b98        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
-                0x08001b98                lcd_interface_delayms
+                0x08001b64        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001b64                lcd_interface_delayms
  .text.lcd_interface_res_clr
-                0x08001ba0       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
-                0x08001ba0                lcd_interface_res_clr
+                0x08001b6c       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001b6c                lcd_interface_res_clr
  .text.lcd_interface_res_set
-                0x08001bb4       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
-                0x08001bb4                lcd_interface_res_set
+                0x08001b80       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001b80                lcd_interface_res_set
  .text.lcd_interface_dc_lcr
-                0x08001bc8       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
-                0x08001bc8                lcd_interface_dc_lcr
+                0x08001b94       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001b94                lcd_interface_dc_lcr
  .text.lcd_interface_dc_set
-                0x08001bdc       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
-                0x08001bdc                lcd_interface_dc_set
+                0x08001ba8       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001ba8                lcd_interface_dc_set
  .text.lcd_interface_cs_clr
-                0x08001bf0       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
-                0x08001bf0                lcd_interface_cs_clr
+                0x08001bbc       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001bbc                lcd_interface_cs_clr
  .text.lcd_interface_cs_set
-                0x08001c04       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
-                0x08001c04                lcd_interface_cs_set
+                0x08001bd0       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001bd0                lcd_interface_cs_set
  .text.lcd_interface_write_8bit_data
-                0x08001c18       0x28 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
-                0x08001c18                lcd_interface_write_8bit_data
+                0x08001be4       0x28 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001be4                lcd_interface_write_8bit_data
  .text.lcd_interface_write_any_data
-                0x08001c40       0x20 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
-                0x08001c40                lcd_interface_write_any_data
+                0x08001c0c       0x20 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001c0c                lcd_interface_write_any_data
  .text.lcd_interface_write_16bit_data
-                0x08001c60       0x2c CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
-                0x08001c60                lcd_interface_write_16bit_data
+                0x08001c2c       0x2c CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001c2c                lcd_interface_write_16bit_data
  .text.lcd_interface_blk_set
-                0x08001c8c       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
-                0x08001c8c                lcd_interface_blk_set
+                0x08001c58       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001c58                lcd_interface_blk_set
+ .text.lcd_interface_fast_fill_color
+                0x08001c6c       0x6c CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+                0x08001c6c                lcd_interface_fast_fill_color
  .text.NRF_ReadReg
-                0x08001ca0       0x36 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001ca0                NRF_ReadReg
+                0x08001cd8       0x36 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08001cd8                NRF_ReadReg
  .text.NRF_WriteReg
-                0x08001cd6       0x38 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001cd6                NRF_WriteReg
+                0x08001d0e       0x38 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08001d0e                NRF_WriteReg
  .text.NRF_GPIO_Init
-                0x08001d0e       0x24 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001d0e                NRF_GPIO_Init
+                0x08001d46       0x24 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08001d46                NRF_GPIO_Init
  .text.NRF_WriteTxFIFO
-                0x08001d32       0x38 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001d32                NRF_WriteTxFIFO
+                0x08001d6a       0x38 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08001d6a                NRF_WriteTxFIFO
  .text.NRF_ClearTxFIFO
-                0x08001d6a       0x2e CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001d6a                NRF_ClearTxFIFO
+                0x08001da2       0x2e CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08001da2                NRF_ClearTxFIFO
  .text.NRF_ClearRxFIFO
-                0x08001d98       0x2e CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001d98                NRF_ClearRxFIFO
+                0x08001dd0       0x2e CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08001dd0                NRF_ClearRxFIFO
  .text.NRF_Reset
-                0x08001dc6      0x120 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001dc6                NRF_Reset
+                0x08001dfe      0x120 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08001dfe                NRF_Reset
  .text.NRF_GetSTATUS
-                0x08001ee6       0x2e CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001ee6                NRF_GetSTATUS
+                0x08001f1e       0x2e CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08001f1e                NRF_GetSTATUS
  .text.NRF_ClearTxDSInterrupt
-                0x08001f14       0x2c CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001f14                NRF_ClearTxDSInterrupt
+                0x08001f4c       0x2c CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08001f4c                NRF_ClearTxDSInterrupt
  .text.NRF_ClearMaxRTInterrupt
-                0x08001f40       0x2c CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001f40                NRF_ClearMaxRTInterrupt
+                0x08001f78       0x2c CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08001f78                NRF_ClearMaxRTInterrupt
  .text.NRF_TxIRQ
-                0x08001f6c       0x18 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001f6c                NRF_TxIRQ
+                0x08001fa4       0x18 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08001fa4                NRF_TxIRQ
  .text.NRF_AirDataWidth
-                0x08001f84       0x6e CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001f84                NRF_AirDataWidth
+                0x08001fbc       0x6e CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08001fbc                NRF_AirDataWidth
  .text.NRF_AirDataRate
-                0x08001ff2       0x74 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08001ff2                NRF_AirDataRate
+                0x0800202a       0x74 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x0800202a                NRF_AirDataRate
  .text.NRF_RFOutputPower
-                0x08002066       0xde CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08002066                NRF_RFOutputPower
+                0x0800209e       0xde CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x0800209e                NRF_RFOutputPower
  .text.NRF_SetFrequency
-                0x08002144       0x1c CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08002144                NRF_SetFrequency
+                0x0800217c       0x1c CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x0800217c                NRF_SetFrequency
  .text.NRF_CRC_EncodingScheme
-                0x08002160       0x4c CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08002160                NRF_CRC_EncodingScheme
+                0x08002198       0x4c CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08002198                NRF_CRC_EncodingScheme
  .text.NRF_AddressFieldWidth
-                0x080021ac       0x5e CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x080021ac                NRF_AddressFieldWidth
- *fill*         0x0800220a        0x2 
+                0x080021e4       0x5e CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x080021e4                NRF_AddressFieldWidth
+ *fill*         0x08002242        0x2 
  .text.NRF_AutomaticRetransmission
-                0x0800220c       0x3c CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x0800220c                NRF_AutomaticRetransmission
+                0x08002244       0x3c CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08002244                NRF_AutomaticRetransmission
  .text.NRF_TxMode
-                0x08002248       0x84 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
-                0x08002248                NRF_TxMode
+                0x08002280       0x84 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+                0x08002280                NRF_TxMode
  .text.nrf_interface_gpio_init
-                0x080022cc       0x94 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
-                0x080022cc                nrf_interface_gpio_init
+                0x08002304       0x94 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
+                0x08002304                nrf_interface_gpio_init
  .text.nrf_interface_ce_set
-                0x08002360       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
-                0x08002360                nrf_interface_ce_set
+                0x08002398       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
+                0x08002398                nrf_interface_ce_set
  .text.nrf_interface_ce_clr
-                0x08002374       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
-                0x08002374                nrf_interface_ce_clr
+                0x080023ac       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
+                0x080023ac                nrf_interface_ce_clr
  .text.nrf_interface_csn_set
-                0x08002388       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
-                0x08002388                nrf_interface_csn_set
+                0x080023c0       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
+                0x080023c0                nrf_interface_csn_set
  .text.nrf_interface_csn_clr
-                0x0800239c       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
-                0x0800239c                nrf_interface_csn_clr
+                0x080023d4       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
+                0x080023d4                nrf_interface_csn_clr
  .text.nrf_interface_spi_swap
-                0x080023b0       0x20 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
-                0x080023b0                nrf_interface_spi_swap
+                0x080023e8       0x20 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
+                0x080023e8                nrf_interface_spi_swap
  .text.nrf_interface_spi_receive
-                0x080023d0       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
-                0x080023d0                nrf_interface_spi_receive
+                0x08002408       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
+                0x08002408                nrf_interface_spi_receive
  .text.nrf_interface_spi_transmit
-                0x080023e4       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
-                0x080023e4                nrf_interface_spi_transmit
+                0x0800241c       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
+                0x0800241c                nrf_interface_spi_transmit
  .text.nrf_interface_delayms
-                0x080023f8        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
-                0x080023f8                nrf_interface_delayms
+                0x08002430        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
+                0x08002430                nrf_interface_delayms
  .text.HAL_Init
-                0x08002400       0x34 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x08002400                HAL_Init
+                0x08002438       0x34 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x08002438                HAL_Init
  .text.HAL_IncTick
-                0x08002434       0x18 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x08002434                HAL_IncTick
+                0x0800246c       0x18 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x0800246c                HAL_IncTick
  .text.HAL_GetTick
-                0x0800244c        0xc CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x0800244c                HAL_GetTick
+                0x08002484        0xc CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x08002484                HAL_GetTick
  .text.HAL_Delay
-                0x08002458       0x28 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x08002458                HAL_Delay
+                0x08002490       0x28 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x08002490                HAL_Delay
  .text.ADC_Init
-                0x08002480      0x134 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+                0x080024b8      0x134 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
  .text.HAL_ADC_Init
-                0x080025b4       0x56 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
-                0x080025b4                HAL_ADC_Init
+                0x080025ec       0x56 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+                0x080025ec                HAL_ADC_Init
  .text.HAL_ADC_ConvHalfCpltCallback
-                0x0800260a        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
-                0x0800260a                HAL_ADC_ConvHalfCpltCallback
+                0x08002642        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+                0x08002642                HAL_ADC_ConvHalfCpltCallback
  .text.HAL_ADC_ErrorCallback
-                0x0800260c        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
-                0x0800260c                HAL_ADC_ErrorCallback
- *fill*         0x0800260e        0x2 
+                0x08002644        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+                0x08002644                HAL_ADC_ErrorCallback
+ *fill*         0x08002646        0x2 
  .text.HAL_ADC_ConfigChannel
-                0x08002610      0x198 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
-                0x08002610                HAL_ADC_ConfigChannel
+                0x08002648      0x198 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+                0x08002648                HAL_ADC_ConfigChannel
  .text.ADC_MultiModeDMAError
-                0x080027a8       0x16 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+                0x080027e0       0x16 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
  .text.ADC_MultiModeDMAHalfConvCplt
-                0x080027be        0xa CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+                0x080027f6        0xa CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
  .text.ADC_MultiModeDMAConvCplt
-                0x080027c8       0x62 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
- *fill*         0x0800282a        0x2 
+                0x08002800       0x62 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+ *fill*         0x08002862        0x2 
  .text.HAL_ADCEx_MultiModeStart_DMA
-                0x0800282c      0x130 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
-                0x0800282c                HAL_ADCEx_MultiModeStart_DMA
+                0x08002864      0x130 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+                0x08002864                HAL_ADCEx_MultiModeStart_DMA
  .text.HAL_ADCEx_MultiModeConfigChannel
-                0x0800295c       0x58 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
-                0x0800295c                HAL_ADCEx_MultiModeConfigChannel
+                0x08002994       0x58 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+                0x08002994                HAL_ADCEx_MultiModeConfigChannel
  .text.HAL_NVIC_SetPriorityGrouping
-                0x080029b4       0x24 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x080029b4                HAL_NVIC_SetPriorityGrouping
+                0x080029ec       0x24 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x080029ec                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x080029d8       0x70 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x080029d8                HAL_NVIC_SetPriority
+                0x08002a10       0x70 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x08002a10                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x08002a48       0x1c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x08002a48                HAL_NVIC_EnableIRQ
+                0x08002a80       0x1c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x08002a80                HAL_NVIC_EnableIRQ
  .text.DMA_SetConfig
-                0x08002a64       0x2c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x08002a9c       0x2c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .text.DMA_CalcBaseAndBitshift
-                0x08002a90       0x44 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x08002ac8       0x44 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .text.DMA_CheckFifoParam
-                0x08002ad4       0x8e CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- *fill*         0x08002b62        0x2 
+                0x08002b0c       0x8e CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ *fill*         0x08002b9a        0x2 
  .text.HAL_DMA_Init
-                0x08002b64       0xcc CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
-                0x08002b64                HAL_DMA_Init
+                0x08002b9c       0xcc CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x08002b9c                HAL_DMA_Init
  .text.HAL_DMA_Start_IT
-                0x08002c30       0x6a CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
-                0x08002c30                HAL_DMA_Start_IT
- *fill*         0x08002c9a        0x2 
+                0x08002c68       0x6a CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x08002c68                HAL_DMA_Start_IT
+ *fill*         0x08002cd2        0x2 
  .text.HAL_DMA_IRQHandler
-                0x08002c9c      0x1dc CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
-                0x08002c9c                HAL_DMA_IRQHandler
+                0x08002cd4      0x1dc CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x08002cd4                HAL_DMA_IRQHandler
  .text.FLASH_Program_DoubleWord
-                0x08002e78       0x30 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+                0x08002eb0       0x30 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .text.FLASH_Program_Word
-                0x08002ea8       0x24 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+                0x08002ee0       0x24 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .text.FLASH_Program_HalfWord
-                0x08002ecc       0x24 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+                0x08002f04       0x24 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .text.FLASH_Program_Byte
-                0x08002ef0       0x20 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+                0x08002f28       0x20 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .text.FLASH_SetErrorCode
-                0x08002f10       0x8c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+                0x08002f48       0x8c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .text.HAL_FLASH_Unlock
-                0x08002f9c       0x30 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
-                0x08002f9c                HAL_FLASH_Unlock
+                0x08002fd4       0x30 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+                0x08002fd4                HAL_FLASH_Unlock
  .text.HAL_FLASH_Lock
-                0x08002fcc       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
-                0x08002fcc                HAL_FLASH_Lock
+                0x08003004       0x14 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+                0x08003004                HAL_FLASH_Lock
  .text.FLASH_WaitForLastOperation
-                0x08002fe0       0x60 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
-                0x08002fe0                FLASH_WaitForLastOperation
+                0x08003018       0x60 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+                0x08003018                FLASH_WaitForLastOperation
  .text.HAL_FLASH_Program
-                0x08003040       0x7c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
-                0x08003040                HAL_FLASH_Program
+                0x08003078       0x7c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+                0x08003078                HAL_FLASH_Program
  .text.FLASH_MassErase
-                0x080030bc       0x24 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+                0x080030f4       0x24 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
  .text.FLASH_Erase_Sector
-                0x080030e0       0x54 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
-                0x080030e0                FLASH_Erase_Sector
+                0x08003118       0x54 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+                0x08003118                FLASH_Erase_Sector
  .text.FLASH_FlushCaches
-                0x08003134       0x60 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
-                0x08003134                FLASH_FlushCaches
+                0x0800316c       0x60 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+                0x0800316c                FLASH_FlushCaches
  .text.HAL_FLASHEx_Erase
-                0x08003194       0x94 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
-                0x08003194                HAL_FLASHEx_Erase
+                0x080031cc       0x94 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+                0x080031cc                HAL_FLASHEx_Erase
  .text.HAL_GPIO_Init
-                0x08003228      0x1e4 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x08003228                HAL_GPIO_Init
+                0x08003260      0x1e4 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x08003260                HAL_GPIO_Init
  .text.HAL_GPIO_ReadPin
-                0x0800340c        0xe CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x0800340c                HAL_GPIO_ReadPin
+                0x08003444        0xe CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x08003444                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x0800341a        0xc CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x0800341a                HAL_GPIO_WritePin
- *fill*         0x08003426        0x2 
+                0x08003452        0xc CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x08003452                HAL_GPIO_WritePin
+ *fill*         0x0800345e        0x2 
  .text.HAL_GPIO_EXTI_IRQHandler
-                0x08003428       0x1c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x08003428                HAL_GPIO_EXTI_IRQHandler
+                0x08003460       0x1c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x08003460                HAL_GPIO_EXTI_IRQHandler
  .text.HAL_RCC_OscConfig
-                0x08003444      0x3f8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08003444                HAL_RCC_OscConfig
+                0x0800347c      0x3f8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x0800347c                HAL_RCC_OscConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x0800383c       0xa4 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x0800383c                HAL_RCC_GetSysClockFreq
+                0x08003874       0xa4 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08003874                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_ClockConfig
-                0x080038e0      0x160 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x080038e0                HAL_RCC_ClockConfig
+                0x08003918      0x160 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08003918                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetHCLKFreq
-                0x08003a40        0xc CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08003a40                HAL_RCC_GetHCLKFreq
+                0x08003a78        0xc CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08003a78                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x08003a4c       0x20 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08003a4c                HAL_RCC_GetPCLK1Freq
+                0x08003a84       0x20 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08003a84                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetClockConfig
-                0x08003a6c       0x3c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08003a6c                HAL_RCC_GetClockConfig
+                0x08003aa4       0x3c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08003aa4                HAL_RCC_GetClockConfig
  .text.SPI_WaitFlagStateUntilTimeout
-                0x08003aa8       0xd4 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x08003ae0       0xd4 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .text.SPI_EndRxTxTransaction
-                0x08003b7c       0x80 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x08003bb4       0x80 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .text.SPI_EndRxTransaction
-                0x08003bfc       0x8c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x08003c34       0x8c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .text.HAL_SPI_Init
-                0x08003c88       0xbe CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
-                0x08003c88                HAL_SPI_Init
+                0x08003cc0       0xbe CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x08003cc0                HAL_SPI_Init
  .text.HAL_SPI_Transmit
-                0x08003d46      0x1b8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
-                0x08003d46                HAL_SPI_Transmit
+                0x08003d7e      0x1b8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x08003d7e                HAL_SPI_Transmit
  .text.HAL_SPI_TransmitReceive
-                0x08003efe      0x244 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
-                0x08003efe                HAL_SPI_TransmitReceive
+                0x08003f36      0x244 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x08003f36                HAL_SPI_TransmitReceive
  .text.HAL_SPI_Receive
-                0x08004142      0x17e CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
-                0x08004142                HAL_SPI_Receive
+                0x0800417a      0x17e CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x0800417a                HAL_SPI_Receive
  .text.TIM_TI1_ConfigInputStage
-                0x080042c0       0x26 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x080042f8       0x26 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .text.TIM_TI2_ConfigInputStage
-                0x080042e6       0x28 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x0800431e       0x28 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .text.TIM_ITRx_SetConfig
-                0x0800430e       0x10 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- *fill*         0x0800431e        0x2 
+                0x08004346       0x10 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ *fill*         0x08004356        0x2 
  .text.HAL_TIM_Base_Start
-                0x08004320       0x7c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08004320                HAL_TIM_Base_Start
+                0x08004358       0x7c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08004358                HAL_TIM_Base_Start
  .text.HAL_TIM_Base_Start_IT
-                0x0800439c       0x88 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x0800439c                HAL_TIM_Base_Start_IT
+                0x080043d4       0x88 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x080043d4                HAL_TIM_Base_Start_IT
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x08004424        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08004424                HAL_TIM_OC_DelayElapsedCallback
+                0x0800445c        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x0800445c                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_IC_CaptureCallback
-                0x08004426        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08004426                HAL_TIM_IC_CaptureCallback
+                0x0800445e        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x0800445e                HAL_TIM_IC_CaptureCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x08004428        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08004428                HAL_TIM_PWM_PulseFinishedCallback
+                0x08004460        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08004460                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x0800442a        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x0800442a                HAL_TIM_TriggerCallback
+                0x08004462        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08004462                HAL_TIM_TriggerCallback
  .text.HAL_TIM_IRQHandler
-                0x0800442c      0x15e CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x0800442c                HAL_TIM_IRQHandler
- *fill*         0x0800458a        0x2 
+                0x08004464      0x15e CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08004464                HAL_TIM_IRQHandler
+ *fill*         0x080045c2        0x2 
  .text.TIM_Base_SetConfig
-                0x0800458c       0xd8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x0800458c                TIM_Base_SetConfig
+                0x080045c4       0xd8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x080045c4                TIM_Base_SetConfig
  .text.HAL_TIM_Base_Init
-                0x08004664       0x58 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08004664                HAL_TIM_Base_Init
+                0x0800469c       0x58 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x0800469c                HAL_TIM_Base_Init
  .text.TIM_ETR_SetConfig
-                0x080046bc       0x1a CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x080046bc                TIM_ETR_SetConfig
+                0x080046f4       0x1a CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x080046f4                TIM_ETR_SetConfig
  .text.HAL_TIM_ConfigClockSource
-                0x080046d6       0xfe CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x080046d6                HAL_TIM_ConfigClockSource
+                0x0800470e       0xfe CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x0800470e                HAL_TIM_ConfigClockSource
  .text.HAL_TIMEx_MasterConfigSynchronization
-                0x080047d4       0x8c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
-                0x080047d4                HAL_TIMEx_MasterConfigSynchronization
+                0x0800480c       0x8c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+                0x0800480c                HAL_TIMEx_MasterConfigSynchronization
  .text.HAL_TIMEx_CommutCallback
-                0x08004860        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
-                0x08004860                HAL_TIMEx_CommutCallback
+                0x08004898        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+                0x08004898                HAL_TIMEx_CommutCallback
  .text.HAL_TIMEx_BreakCallback
-                0x08004862        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
-                0x08004862                HAL_TIMEx_BreakCallback
+                0x0800489a        0x2 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+                0x0800489a                HAL_TIMEx_BreakCallback
  .text.SysTick_Handler
-                0x08004864       0x18 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-                0x08004864                SysTick_Handler
+                0x0800489c       0x18 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x0800489c                SysTick_Handler
  .text.osKernelInitialize
-                0x0800487c       0x24 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-                0x0800487c                osKernelInitialize
+                0x080048b4       0x24 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x080048b4                osKernelInitialize
  .text.osKernelStart
-                0x080048a0       0x38 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-                0x080048a0                osKernelStart
+                0x080048d8       0x38 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x080048d8                osKernelStart
  .text.osThreadNew
-                0x080048d8       0xbc CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-                0x080048d8                osThreadNew
+                0x08004910       0xbc CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x08004910                osThreadNew
  .text.osSemaphoreNew
-                0x08004994       0xb4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-                0x08004994                osSemaphoreNew
+                0x080049cc       0xb4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x080049cc                osSemaphoreNew
  .text.vApplicationGetIdleTaskMemory
-                0x08004a48       0x18 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-                0x08004a48                vApplicationGetIdleTaskMemory
+                0x08004a80       0x18 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x08004a80                vApplicationGetIdleTaskMemory
  .text.vApplicationGetTimerTaskMemory
-                0x08004a60       0x18 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-                0x08004a60                vApplicationGetTimerTaskMemory
+                0x08004a98       0x18 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x08004a98                vApplicationGetTimerTaskMemory
  .text.vListInitialise
-                0x08004a78       0x16 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x08004a78                vListInitialise
+                0x08004ab0       0x16 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x08004ab0                vListInitialise
  .text.vListInitialiseItem
-                0x08004a8e        0x6 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x08004a8e                vListInitialiseItem
+                0x08004ac6        0x6 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x08004ac6                vListInitialiseItem
  .text.vListInsertEnd
-                0x08004a94       0x16 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x08004a94                vListInsertEnd
+                0x08004acc       0x16 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x08004acc                vListInsertEnd
  .text.vListInsert
-                0x08004aaa       0x32 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x08004aaa                vListInsert
+                0x08004ae2       0x32 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x08004ae2                vListInsert
  .text.uxListRemove
-                0x08004adc       0x26 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x08004adc                uxListRemove
- *fill*         0x08004b02        0x2 
+                0x08004b14       0x26 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x08004b14                uxListRemove
+ *fill*         0x08004b3a        0x2 
  .text.prvTaskExitError
-                0x08004b04       0x40 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08004b3c       0x40 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
  .text.prvPortStartFirstTask
-                0x08004b44       0x28 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08004b7c       0x28 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
  .text.vPortEnableVFP
-                0x08004b6c       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08004ba4       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
  .text.pxPortInitialiseStack
-                0x08004b80       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08004b80                pxPortInitialiseStack
- *fill*         0x08004bac        0x4 
+                0x08004bb8       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08004bb8                pxPortInitialiseStack
+ *fill*         0x08004be4        0xc 
  .text.SVC_Handler
-                0x08004bb0       0x24 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08004bb0                SVC_Handler
+                0x08004bf0       0x24 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08004bf0                SVC_Handler
  .text.vPortEnterCritical
-                0x08004bd4       0x44 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08004bd4                vPortEnterCritical
+                0x08004c14       0x44 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08004c14                vPortEnterCritical
  .text.vPortExitCritical
-                0x08004c18       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08004c18                vPortExitCritical
- *fill*         0x08004c44        0xc 
+                0x08004c58       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08004c58                vPortExitCritical
+ *fill*         0x08004c84        0xc 
  .text.PendSV_Handler
-                0x08004c50       0x64 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08004c50                PendSV_Handler
+                0x08004c90       0x64 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08004c90                PendSV_Handler
  .text.xPortSysTickHandler
-                0x08004cb4       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08004cb4                xPortSysTickHandler
+                0x08004cf4       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08004cf4                xPortSysTickHandler
  .text.vPortSetupTimerInterrupt
-                0x08004ce0       0x28 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08004ce0                vPortSetupTimerInterrupt
+                0x08004d20       0x28 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08004d20                vPortSetupTimerInterrupt
  .text.xPortStartScheduler
-                0x08004d08      0x118 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08004d08                xPortStartScheduler
+                0x08004d48      0x118 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08004d48                xPortStartScheduler
  .text.vPortValidateInterruptPriority
-                0x08004e20       0x5c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08004e20                vPortValidateInterruptPriority
+                0x08004e60       0x5c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08004e60                vPortValidateInterruptPriority
  .text.prvHeapInit
-                0x08004e7c       0x64 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x08004ebc       0x64 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .text.prvInsertBlockIntoFreeList
-                0x08004ee0       0x64 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x08004f20       0x64 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .text.pvPortMalloc
-                0x08004f44       0xfc CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-                0x08004f44                pvPortMalloc
+                0x08004f84       0xfc CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x08004f84                pvPortMalloc
  .text.vPortFree
-                0x08005040       0x7c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-                0x08005040                vPortFree
+                0x08005080       0x7c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x08005080                vPortFree
  .text.prvGetDisinheritPriorityAfterTimeout
-                0x080050bc       0x10 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x080050fc       0x10 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
  .text.prvIsQueueFull
-                0x080050cc       0x1e CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x0800510c       0x1e CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
  .text.prvIsQueueEmpty
-                0x080050ea       0x1a CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x0800512a       0x1a CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
  .text.prvCopyDataToQueue
-                0x08005104       0x76 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x08005144       0x76 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
  .text.prvCopyDataFromQueue
-                0x0800517a       0x24 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x080051ba       0x24 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
  .text.prvUnlockQueue
-                0x0800519e       0x6e CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x080051de       0x6e CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
  .text.xQueueGenericReset
-                0x0800520c       0x84 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x0800520c                xQueueGenericReset
+                0x0800524c       0x84 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x0800524c                xQueueGenericReset
  .text.prvInitialiseNewQueue
-                0x08005290       0x22 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x080052d0       0x22 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
  .text.xQueueGenericCreateStatic
-                0x080052b2       0x94 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x080052b2                xQueueGenericCreateStatic
+                0x080052f2       0x94 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x080052f2                xQueueGenericCreateStatic
  .text.xQueueGenericCreate
-                0x08005346       0x48 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x08005346                xQueueGenericCreate
+                0x08005386       0x48 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x08005386                xQueueGenericCreate
  .text.xQueueCreateCountingSemaphoreStatic
-                0x0800538e       0x46 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x0800538e                xQueueCreateCountingSemaphoreStatic
+                0x080053ce       0x46 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x080053ce                xQueueCreateCountingSemaphoreStatic
  .text.xQueueCreateCountingSemaphore
-                0x080053d4       0x3c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x080053d4                xQueueCreateCountingSemaphore
+                0x08005414       0x3c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x08005414                xQueueCreateCountingSemaphore
  .text.xQueueGenericSend
-                0x08005410      0x188 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x08005410                xQueueGenericSend
+                0x08005450      0x188 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x08005450                xQueueGenericSend
  .text.xQueueGenericSendFromISR
-                0x08005598       0xce CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x08005598                xQueueGenericSendFromISR
+                0x080055d8       0xce CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x080055d8                xQueueGenericSendFromISR
  .text.xQueueGiveFromISR
-                0x08005666       0xb2 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x08005666                xQueueGiveFromISR
+                0x080056a6       0xb2 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x080056a6                xQueueGiveFromISR
  .text.xQueueReceive
-                0x08005718      0x15e CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x08005718                xQueueReceive
+                0x08005758      0x15e CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x08005758                xQueueReceive
  .text.xQueueSemaphoreTake
-                0x08005876      0x1a6 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x08005876                xQueueSemaphoreTake
+                0x080058b6      0x1a6 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x080058b6                xQueueSemaphoreTake
  .text.vQueueAddToRegistry
-                0x08005a1c       0x28 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x08005a1c                vQueueAddToRegistry
+                0x08005a5c       0x28 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x08005a5c                vQueueAddToRegistry
  .text.vQueueUnregisterQueue
-                0x08005a44       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x08005a44                vQueueUnregisterQueue
+                0x08005a84       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x08005a84                vQueueUnregisterQueue
  .text.vQueueDelete
-                0x08005a70       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x08005a70                vQueueDelete
+                0x08005ab0       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x08005ab0                vQueueDelete
  .text.vQueueWaitForMessageRestricted
-                0x08005a9c       0x52 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x08005a9c                vQueueWaitForMessageRestricted
- *fill*         0x08005aee        0x2 
+                0x08005adc       0x52 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x08005adc                vQueueWaitForMessageRestricted
+ *fill*         0x08005b2e        0x2 
  .text.prvResetNextTaskUnblockTime
-                0x08005af0       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005b30       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvInitialiseNewTask
-                0x08005b1c       0xa6 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- *fill*         0x08005bc2        0x2 
+                0x08005b5c       0xa6 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x08005c02        0x2 
  .text.prvInitialiseTaskLists
-                0x08005bc4       0x68 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005c04       0x68 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvAddNewTaskToReadyList
-                0x08005c2c       0xac CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005c6c       0xac CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvDeleteTCB
-                0x08005cd8       0x38 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005d18       0x38 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvCheckTasksWaitingTermination
-                0x08005d10       0x4c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005d50       0x4c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvIdleTask
-                0x08005d5c       0x28 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005d9c       0x28 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvAddCurrentTaskToDelayedList
-                0x08005d84       0x7c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005dc4       0x7c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.xTaskCreateStatic
-                0x08005e00       0x76 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08005e00                xTaskCreateStatic
+                0x08005e40       0x76 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005e40                xTaskCreateStatic
  .text.xTaskCreate
-                0x08005e76       0x68 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08005e76                xTaskCreate
- *fill*         0x08005ede        0x2 
+                0x08005eb6       0x68 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005eb6                xTaskCreate
+ *fill*         0x08005f1e        0x2 
  .text.vTaskStartScheduler
-                0x08005ee0       0x9c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08005ee0                vTaskStartScheduler
+                0x08005f20       0x9c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005f20                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x08005f7c       0x10 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08005f7c                vTaskSuspendAll
+                0x08005fbc       0x10 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005fbc                vTaskSuspendAll
  .text.xTaskGetTickCount
-                0x08005f8c        0xc CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08005f8c                xTaskGetTickCount
+                0x08005fcc        0xc CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005fcc                xTaskGetTickCount
  .text.xTaskIncrementTick
-                0x08005f98      0x118 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08005f98                xTaskIncrementTick
+                0x08005fd8      0x118 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08005fd8                xTaskIncrementTick
  .text.xTaskResumeAll
-                0x080060b0       0xf8 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x080060b0                xTaskResumeAll
+                0x080060f0       0xf8 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080060f0                xTaskResumeAll
  .text.vTaskDelay
-                0x080061a8       0x4c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x080061a8                vTaskDelay
+                0x080061e8       0x4c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080061e8                vTaskDelay
  .text.vTaskSwitchContext
-                0x080061f4       0x94 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x080061f4                vTaskSwitchContext
+                0x08006234       0x94 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08006234                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x08006288       0x30 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08006288                vTaskPlaceOnEventList
+                0x080062c8       0x30 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080062c8                vTaskPlaceOnEventList
  .text.vTaskPlaceOnEventListRestricted
-                0x080062b8       0x38 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x080062b8                vTaskPlaceOnEventListRestricted
+                0x080062f8       0x38 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080062f8                vTaskPlaceOnEventListRestricted
  .text.xTaskRemoveFromEventList
-                0x080062f0       0x8c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x080062f0                xTaskRemoveFromEventList
+                0x08006330       0x8c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08006330                xTaskRemoveFromEventList
  .text.vTaskInternalSetTimeOutState
-                0x0800637c       0x18 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x0800637c                vTaskInternalSetTimeOutState
+                0x080063bc       0x18 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080063bc                vTaskInternalSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x08006394       0x84 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08006394                xTaskCheckForTimeOut
+                0x080063d4       0x84 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080063d4                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x08006418        0xc CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08006418                vTaskMissedYield
+                0x08006458        0xc CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08006458                vTaskMissedYield
  .text.xTaskGetSchedulerState
-                0x08006424       0x20 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08006424                xTaskGetSchedulerState
+                0x08006464       0x20 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08006464                xTaskGetSchedulerState
  .text.xTaskPriorityInherit
-                0x08006444       0x98 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08006444                xTaskPriorityInherit
+                0x08006484       0x98 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08006484                xTaskPriorityInherit
  .text.xTaskPriorityDisinherit
-                0x080064dc       0x90 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x080064dc                xTaskPriorityDisinherit
+                0x0800651c       0x90 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x0800651c                xTaskPriorityDisinherit
  .text.vTaskPriorityDisinheritAfterTimeout
-                0x0800656c       0xa0 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x0800656c                vTaskPriorityDisinheritAfterTimeout
+                0x080065ac       0xa0 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080065ac                vTaskPriorityDisinheritAfterTimeout
  .text.pvTaskIncrementMutexHeldCount
-                0x0800660c       0x1c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x0800660c                pvTaskIncrementMutexHeldCount
+                0x0800664c       0x1c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x0800664c                pvTaskIncrementMutexHeldCount
  .text.prvGetNextExpireTime
-                0x08006628       0x20 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x08006668       0x20 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .text.prvInsertTimerInActiveList
-                0x08006648       0x48 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x08006688       0x48 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .text.prvCheckForValidListAndQueue
-                0x08006690       0x70 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x080066d0       0x70 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .text.xTimerCreateTimerTask
-                0x08006700       0x64 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
-                0x08006700                xTimerCreateTimerTask
+                0x08006740       0x64 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x08006740                xTimerCreateTimerTask
  .text.xTimerGenericCommand
-                0x08006764       0x6c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
-                0x08006764                xTimerGenericCommand
+                0x080067a4       0x6c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x080067a4                xTimerGenericCommand
  .text.prvSwitchTimerLists
-                0x080067d0       0x7c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x08006810       0x7c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .text.prvSampleTimeNow
-                0x0800684c       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x0800688c       0x2c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .text.prvProcessExpiredTimer
-                0x08006878       0x6c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x080068b8       0x6c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .text.prvProcessTimerOrBlockTask
-                0x080068e4       0x74 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x08006924       0x74 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .text.prvProcessReceivedCommands
-                0x08006958      0x10c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x08006998      0x10c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .text.prvTimerTask
-                0x08006a64       0x16 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
- *fill*         0x08006a7a        0x2 
+                0x08006aa4       0x16 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ *fill*         0x08006aba        0x2 
  .text.__libc_init_array
-                0x08006a7c       0x48 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
-                0x08006a7c                __libc_init_array
- .text.memset   0x08006ac4       0xa4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
-                0x08006ac4                memset
+                0x08006abc       0x48 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
+                0x08006abc                __libc_init_array
+ .text.memset   0x08006b04       0xa4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
+                0x08006b04                memset
  .text.startup.register_fini
-                0x08006b68       0x14 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
- .text.atexit   0x08006b7c        0xc c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
-                0x08006b7c                atexit
+                0x08006ba8       0x14 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+ .text.atexit   0x08006bbc        0xc c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
+                0x08006bbc                atexit
  .text.__libc_fini_array
-                0x08006b88       0x2c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
-                0x08006b88                __libc_fini_array
+                0x08006bc8       0x2c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
+                0x08006bc8                __libc_fini_array
  .text.__retarget_lock_acquire_recursive
-                0x08006bb4        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
-                0x08006bb4                __retarget_lock_acquire_recursive
+                0x08006bf4        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+                0x08006bf4                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x08006bb8        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
-                0x08006bb8                __retarget_lock_release_recursive
+                0x08006bf8        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+                0x08006bf8                __retarget_lock_release_recursive
  .text.__register_exitproc
-                0x08006bbc       0x8c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
-                0x08006bbc                __register_exitproc
+                0x08006bfc       0x8c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
+                0x08006bfc                __register_exitproc
  *(.glue_7)
- .glue_7        0x08006c48        0x0 linker stubs
+ .glue_7        0x08006c88        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08006c48        0x0 linker stubs
+ .glue_7t       0x08006c88        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08006c48        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08006c88        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08006c48        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08006c48                _init
- .init          0x08006c4c        0x8 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08006c88        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08006c88                _init
+ .init          0x08006c8c        0x8 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08006c54        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08006c54                _fini
- .fini          0x08006c58        0x8 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08006c60                . = ALIGN (0x4)
-                0x08006c60                _etext = .
+ .fini          0x08006c94        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08006c94                _fini
+ .fini          0x08006c98        0x8 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08006ca0                . = ALIGN (0x4)
+                0x08006ca0                _etext = .
 
-.vfp11_veneer   0x08006c60        0x0
- .vfp11_veneer  0x08006c60        0x0 linker stubs
+.vfp11_veneer   0x08006ca0        0x0
+ .vfp11_veneer  0x08006ca0        0x0 linker stubs
 
-.v4_bx          0x08006c60        0x0
- .v4_bx         0x08006c60        0x0 linker stubs
+.v4_bx          0x08006ca0        0x0
+ .v4_bx         0x08006ca0        0x0 linker stubs
 
-.iplt           0x08006c60        0x0
- .iplt          0x08006c60        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08006ca0        0x0
+ .iplt          0x08006ca0        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08006c60    0x1dd00
-                0x08006c60                . = ALIGN (0x4)
+.rodata         0x08006ca0    0x1dd00
+                0x08006ca0                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.str1.4
-                0x08006c60       0x2d CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
- *fill*         0x08006c8d        0x3 
+                0x08006ca0       0x2d CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+ *fill*         0x08006ccd        0x3 
  .rodata.BinSem_DataReady_attributes
-                0x08006c90       0x10 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x08006c90                BinSem_DataReady_attributes
+                0x08006cd0       0x10 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08006cd0                BinSem_DataReady_attributes
  .rodata.NRFSem_Tx_attributes
-                0x08006ca0       0x10 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x08006ca0                NRFSem_Tx_attributes
+                0x08006ce0       0x10 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08006ce0                NRFSem_Tx_attributes
  .rodata.adc_attributes
-                0x08006cb0       0x24 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x08006cb0                adc_attributes
+                0x08006cf0       0x24 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08006cf0                adc_attributes
  .rodata.gImage_Buffer
-                0x08006cd4     0x1ccc CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x08006cd4                gImage_Buffer
+                0x08006d14     0x1ccc CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08006d14                gImage_Buffer
  .rodata.gImage_JianTou
-                0x080089a0      0x214 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x080089a0                gImage_JianTou
+                0x080089e0      0x214 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x080089e0                gImage_JianTou
  .rodata.gImage_JuXing
-                0x08008bb4     0x4e20 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x08008bb4                gImage_JuXing
+                0x08008bf4     0x4e20 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08008bf4                gImage_JuXing
  .rodata.gImage_KeDu
-                0x0800d9d4     0x2814 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x0800d9d4                gImage_KeDu
+                0x0800da14     0x2814 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x0800da14                gImage_KeDu
  .rodata.gImage_Title1
-                0x080101e8     0x4380 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x080101e8                gImage_Title1
+                0x08010228     0x4380 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08010228                gImage_Title1
  .rodata.gImage_Title2
-                0x08014568      0x780 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x08014568                gImage_Title2
+                0x080145a8      0x780 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x080145a8                gImage_Title2
  .rodata.gImage_WeiTiaoBG
-                0x08014ce8     0xc800 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x08014ce8                gImage_WeiTiaoBG
+                0x08014d28     0xc800 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08014d28                gImage_WeiTiaoBG
  .rodata.lcd_attributes
-                0x080214e8       0x24 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x080214e8                lcd_attributes
+                0x08021528       0x24 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x08021528                lcd_attributes
  .rodata.main_attributes
-                0x0802150c       0x24 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x0802150c                main_attributes
+                0x0802154c       0x24 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x0802154c                main_attributes
  .rodata.AHBPrescTable
-                0x08021530       0x10 CMakeFiles/F407_Controller.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08021530                AHBPrescTable
+                0x08021570       0x10 CMakeFiles/F407_Controller.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x08021570                AHBPrescTable
  .rodata.APBPrescTable
-                0x08021540        0x8 CMakeFiles/F407_Controller.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08021540                APBPrescTable
+                0x08021580        0x8 CMakeFiles/F407_Controller.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x08021580                APBPrescTable
  .rodata.ascii_1206
-                0x08021548      0x474 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x08021548                ascii_1206
+                0x08021588      0x474 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x08021588                ascii_1206
  .rodata.ascii_1608
-                0x080219bc      0x5f0 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x080219bc                ascii_1608
+                0x080219fc      0x5f0 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x080219fc                ascii_1608
  .rodata.ascii_2412
-                0x08021fac     0x11d0 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x08021fac                ascii_2412
+                0x08021fec     0x11d0 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x08021fec                ascii_2412
  .rodata.ascii_3216
-                0x0802317c     0x17c0 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
-                0x0802317c                ascii_3216
+                0x080231bc     0x17c0 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+                0x080231bc                ascii_3216
  .rodata.flagBitshiftOffset.0
-                0x0802493c        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x0802497c        0x8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .rodata.vTaskStartScheduler.str1.4
-                0x08024944        0x5 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- *fill*         0x08024949        0x3 
+                0x08024984        0x5 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x08024989        0x3 
  .rodata.prvCheckForValidListAndQueue.str1.4
-                0x0802494c        0x5 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
- *fill*         0x08024951        0x3 
+                0x0802498c        0x5 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ *fill*         0x08024991        0x3 
  .rodata.xTimerCreateTimerTask.str1.4
-                0x08024954        0x8 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x08024994        0x8 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .rodata._global_impure_ptr
-                0x0802495c        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-impure.o)
-                0x0802495c                _global_impure_ptr
-                0x08024960                . = ALIGN (0x4)
+                0x0802499c        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-impure.o)
+                0x0802499c                _global_impure_ptr
+                0x080249a0                . = ALIGN (0x4)
 
-.ARM.extab      0x08024960        0x0
-                0x08024960                . = ALIGN (0x4)
+.ARM.extab      0x080249a0        0x0
+                0x080249a0                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08024960                . = ALIGN (0x4)
+                0x080249a0                . = ALIGN (0x4)
 
-.ARM            0x08024960        0x8
-                0x08024960                . = ALIGN (0x4)
-                0x08024960                __exidx_start = .
+.ARM            0x080249a0        0x8
+                0x080249a0                . = ALIGN (0x4)
+                0x080249a0                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08024960        0x8 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08024968                __exidx_end = .
-                0x08024968                . = ALIGN (0x4)
+ .ARM.exidx     0x080249a0        0x8 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x080249a8                __exidx_end = .
+                0x080249a8                . = ALIGN (0x4)
 
-.rel.dyn        0x08024968        0x0
- .rel.iplt      0x08024968        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x080249a8        0x0
+ .rel.iplt      0x080249a8        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.preinit_array  0x08024968        0x0
-                0x08024968                . = ALIGN (0x4)
-                0x08024968                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x080249a8        0x0
+                0x080249a8                . = ALIGN (0x4)
+                0x080249a8                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08024968                PROVIDE (__preinit_array_end = .)
-                0x08024968                . = ALIGN (0x4)
+                0x080249a8                PROVIDE (__preinit_array_end = .)
+                0x080249a8                . = ALIGN (0x4)
 
-.init_array     0x08024968        0x8
-                0x08024968                . = ALIGN (0x4)
-                0x08024968                PROVIDE (__init_array_start = .)
+.init_array     0x080249a8        0x8
+                0x080249a8                . = ALIGN (0x4)
+                0x080249a8                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x08024968        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+                0x080249a8        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0802496c        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08024970                PROVIDE (__init_array_end = .)
-                0x08024970                . = ALIGN (0x4)
+ .init_array    0x080249ac        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080249b0                PROVIDE (__init_array_end = .)
+                0x080249b0                . = ALIGN (0x4)
 
-.fini_array     0x08024970        0x4
-                0x08024970                . = ALIGN (0x4)
-                0x08024970                PROVIDE (__fini_array_start = .)
+.fini_array     0x080249b0        0x4
+                0x080249b0                . = ALIGN (0x4)
+                0x080249b0                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08024970        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08024974                PROVIDE (__fini_array_end = .)
-                0x08024974                . = ALIGN (0x4)
-                0x08024974                _sidata = LOADADDR (.data)
+ .fini_array    0x080249b0        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080249b4                PROVIDE (__fini_array_end = .)
+                0x080249b4                . = ALIGN (0x4)
+                0x080249b4                _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x43c load address 0x08024974
+.data           0x20000000      0x43c load address 0x080249b4
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -2678,27 +2679,30 @@ LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/
  *(.RamFunc*)
                 0x2000043c                . = ALIGN (0x4)
                 0x2000043c                _edata = .
-                0x08024db0                _siccmram = LOADADDR (.ccmram)
+                0x08024df0                _siccmram = LOADADDR (.ccmram)
 
-.igot.plt       0x2000043c        0x0 load address 0x08024db0
+.igot.plt       0x2000043c        0x0 load address 0x08024df0
  .igot.plt      0x2000043c        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.ccmram         0x10000000     0x70ec load address 0x08024db0
+.ccmram         0x10000000     0x710c load address 0x08024df0
                 0x10000000                . = ALIGN (0x4)
-                0x100070ec                _sccmram = .
+                0x1000710c                _sccmram = .
  *(.ccmram)
- .ccmram        0x10000000     0x70ec CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x10000000                DisPlayBuffer2
-                0x10004e20                DisplayBuffer
-                0x10006aec                mainBuffer
-                0x10006cec                adcBuffer
-                0x10006eec                lcdBuffer
+ .ccmram        0x10000000     0x710c CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x10000000                offset
+                0x10000010                adc
+                0x10000018                txBuffer
+                0x10000020                DisPlayBuffer2
+                0x10004e40                DisplayBuffer
+                0x10006b0c                mainBuffer
+                0x10006d0c                adcBuffer
+                0x10006f0c                lcdBuffer
  *(.ccmram*)
-                0x100070ec                . = ALIGN (0x4)
-                0x100070ec                _eccmram = .
-                0x100070ec                . = ALIGN (0x4)
+                0x1000710c                . = ALIGN (0x4)
+                0x1000710c                _eccmram = .
+                0x1000710c                . = ALIGN (0x4)
 
-.bss            0x2000043c     0x4d2c
+.bss            0x2000043c     0xd044
                 0x2000043c                _sbss = .
                 0x2000043c                __bss_start__ = _sbss
  *(.bss)
@@ -2717,159 +2721,154 @@ LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/
  .bss.NRFSem_TxHandle
                 0x2000054c        0x4 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
                 0x2000054c                NRFSem_TxHandle
- .bss.adc       0x20000550        0x8 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x20000550                adc
  .bss.adcControlBlock
-                0x20000558       0x5c CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x20000558                adcControlBlock
+                0x20000550       0x5c CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x20000550                adcControlBlock
  .bss.adcHandle
-                0x200005b4        0x4 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x200005b4                adcHandle
+                0x200005ac        0x4 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x200005ac                adcHandle
  .bss.lcdControlBlock
-                0x200005b8       0x5c CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x200005b8                lcdControlBlock
+                0x200005b0       0x5c CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x200005b0                lcdControlBlock
  .bss.lcdHandle
-                0x20000614        0x4 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x20000614                lcdHandle
+                0x2000060c        0x4 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x2000060c                lcdHandle
  .bss.mainControlBlock
-                0x20000618       0x5c CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x20000618                mainControlBlock
+                0x20000610       0x5c CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x20000610                mainControlBlock
  .bss.mainHandle
-                0x20000674        0x4 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x20000674                mainHandle
- .bss.offset    0x20000678       0x10 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x20000678                offset
- .bss.txBuffer  0x20000688       0x10 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
-                0x20000688                txBuffer
+                0x2000066c        0x4 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+                0x2000066c                mainHandle
  .bss.dmaBuffer
-                0x20000698        0x8 CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
-                0x20000698                dmaBuffer
- .bss.hspi1     0x200006a0       0x58 CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
-                0x200006a0                hspi1
- .bss.hspi3     0x200006f8       0x58 CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
-                0x200006f8                hspi3
- .bss.htim14    0x20000750       0x48 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
-                0x20000750                htim14
- .bss.htim3     0x20000798       0x48 CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj
-                0x20000798                htim3
+                0x20000670        0x8 CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
+                0x20000670                dmaBuffer
+ .bss.hspi1     0x20000678       0x58 CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
+                0x20000678                hspi1
+ .bss.hspi3     0x200006d0       0x58 CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
+                0x200006d0                hspi3
+ .bss.htim14    0x20000728       0x48 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
+                0x20000728                htim14
+ .bss.htim3     0x20000770       0x48 CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj
+                0x20000770                htim3
  .bss.adcStaticValue
-                0x200007e0       0x10 CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj
-                0x200007e0                adcStaticValue
- .bss.uwTick    0x200007f0        0x4 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x200007f0                uwTick
- .bss.pFlash    0x200007f4       0x20 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
-                0x200007f4                pFlash
+                0x200007b8       0x10 CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj
+                0x200007b8                adcStaticValue
+ .bss.Data.0    0x200007c8     0x8340 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+ .bss.uwTick    0x20008b08        0x4 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x20008b08                uwTick
+ .bss.pFlash    0x20008b0c       0x20 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+                0x20008b0c                pFlash
  .bss.Idle_Stack.2
-                0x20000814      0x200 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x20008b2c      0x200 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.Idle_TCB.3
-                0x20000a14       0x5c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x20008d2c       0x5c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.KernelState
-                0x20000a70        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x20008d88        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.Timer_Stack.0
-                0x20000a74      0x400 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x20008d8c      0x400 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.Timer_TCB.1
-                0x20000e74       0x5c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x2000918c       0x5c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.ucMaxSysCallPriority
-                0x20000ed0        0x1 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- *fill*         0x20000ed1        0x3 
+                0x200091e8        0x1 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ *fill*         0x200091e9        0x3 
  .bss.ulMaxPRIGROUPValue
-                0x20000ed4        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .bss.pxEnd     0x20000ed8        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .bss.ucHeap    0x20000edc     0x3c00 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x200091ec        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .bss.pxEnd     0x200091f0        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .bss.ucHeap    0x200091f4     0x3c00 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xBlockAllocatedBit
-                0x20004adc        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x2000cdf4        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xFreeBytesRemaining
-                0x20004ae0        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x2000cdf8        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xMinimumEverFreeBytesRemaining
-                0x20004ae4        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x2000cdfc        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xNumberOfSuccessfulAllocations
-                0x20004ae8        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x2000ce00        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xNumberOfSuccessfulFrees
-                0x20004aec        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .bss.xStart    0x20004af0        0x8 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x2000ce04        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .bss.xStart    0x2000ce08        0x8 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xQueueRegistry
-                0x20004af8       0x40 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x20004af8                xQueueRegistry
+                0x2000ce10       0x40 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x2000ce10                xQueueRegistry
  .bss.pxCurrentTCB
-                0x20004b38        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x20004b38                pxCurrentTCB
+                0x2000ce50        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000ce50                pxCurrentTCB
  .bss.pxDelayedTaskList
-                0x20004b3c        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000ce54        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.pxOverflowDelayedTaskList
-                0x20004b40        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000ce58        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.pxReadyTasksLists
-                0x20004b44      0x460 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000ce5c      0x460 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxCurrentNumberOfTasks
-                0x20004fa4        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d2bc        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxDeletedTasksWaitingCleanUp
-                0x20004fa8        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d2c0        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxSchedulerSuspended
-                0x20004fac        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d2c4        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxTaskNumber
-                0x20004fb0        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d2c8        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxTopReadyPriority
-                0x20004fb4        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d2cc        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xDelayedTaskList1
-                0x20004fb8       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d2d0       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xDelayedTaskList2
-                0x20004fcc       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d2e4       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xIdleTaskHandle
-                0x20004fe0        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d2f8        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xNextTaskUnblockTime
-                0x20004fe4        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d2fc        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xNumOfOverflows
-                0x20004fe8        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d300        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xPendedTicks
-                0x20004fec        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d304        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xPendingReadyList
-                0x20004ff0       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d308       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xSchedulerRunning
-                0x20005004        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d31c        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xSuspendedTaskList
-                0x20005008       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d320       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xTasksWaitingTermination
-                0x2000501c       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d334       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xTickCount
-                0x20005030        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d348        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xYieldPending
-                0x20005034        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000d34c        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.pxCurrentTimerList
-                0x20005038        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x2000d350        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.pxOverflowTimerList
-                0x2000503c        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x2000d354        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.ucStaticTimerQueueStorage.1
-                0x20005040       0xa0 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x2000d358       0xa0 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xActiveTimerList1
-                0x200050e0       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x2000d3f8       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xActiveTimerList2
-                0x200050f4       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x2000d40c       0x14 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xLastTime.2
-                0x20005108        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x2000d420        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xStaticTimerQueue.0
-                0x2000510c       0x50 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x2000d424       0x50 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xTimerQueue
-                0x2000515c        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x2000d474        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xTimerTaskHandle
-                0x20005160        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x2000d478        0x4 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.__lock___atexit_recursive_mutex
-                0x20005164        0x1 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
-                0x20005164                __lock___atexit_recursive_mutex
+                0x2000d47c        0x1 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+                0x2000d47c                __lock___atexit_recursive_mutex
  *(COMMON)
-                0x20005168                . = ALIGN (0x4)
- *fill*         0x20005165        0x3 
-                0x20005168                _ebss = .
-                0x20005168                __bss_end__ = _ebss
+                0x2000d480                . = ALIGN (0x4)
+ *fill*         0x2000d47d        0x3 
+                0x2000d480                _ebss = .
+                0x2000d480                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20005168      0x600
-                0x20005168                . = ALIGN (0x8)
+                0x2000d480      0x600
+                0x2000d480                . = ALIGN (0x8)
                 [!provide]                PROVIDE (end = .)
-                0x20005168                PROVIDE (_end = .)
-                0x20005368                . = (. + _Min_Heap_Size)
- *fill*         0x20005168      0x200 
-                0x20005768                . = (. + _Min_Stack_Size)
- *fill*         0x20005368      0x400 
-                0x20005768                . = ALIGN (0x8)
+                0x2000d480                PROVIDE (_end = .)
+                0x2000d680                . = (. + _Min_Heap_Size)
+ *fill*         0x2000d480      0x200 
+                0x2000da80                . = (. + _Min_Stack_Size)
+ *fill*         0x2000d680      0x400 
+                0x2000da80                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -2983,59 +2982,59 @@ LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/
                 0x000009bb       0x34 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
  .ARM.attributes
                 0x000009ef       0x1e c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08024db0                _siccmram = LOADADDR (.ccmram)
+                0x08024df0                _siccmram = LOADADDR (.ccmram)
 
-.ccmram         0x100070ec        0x0
-                0x100070ec                . = ALIGN (0x4)
-                0x100070ec                _sccmram = .
+.ccmram         0x1000710c        0x0
+                0x1000710c                . = ALIGN (0x4)
+                0x1000710c                _sccmram = .
  *(.ccmram)
  *(.ccmram*)
-                0x100070ec                . = ALIGN (0x4)
-                0x100070ec                _eccmram = .
+                0x1000710c                . = ALIGN (0x4)
+                0x1000710c                _eccmram = .
 OUTPUT(F407_Controller.elf elf32-littlearm)
 LOAD linker stubs
 LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a
 LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000    0x27a16
+.debug_info     0x00000000    0x27a35
  .debug_info    0x00000000      0xc7e CMakeFiles/F407_Controller.elf.dir/Core/Src/adc.c.obj
  .debug_info    0x00000c7e      0x4fc CMakeFiles/F407_Controller.elf.dir/Core/Src/dma.c.obj
- .debug_info    0x0000117a     0x16be CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
- .debug_info    0x00002838      0x6a4 CMakeFiles/F407_Controller.elf.dir/Core/Src/gpio.c.obj
- .debug_info    0x00002edc      0xf7d CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
- .debug_info    0x00003e59      0xade CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
- .debug_info    0x00004937      0x4f8 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_info    0x00004e2f      0xc9e CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
- .debug_info    0x00005acd      0x779 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_info    0x00006246      0x538 CMakeFiles/F407_Controller.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_info    0x0000677e      0xa14 CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj
- .debug_info    0x00007192       0x22 CMakeFiles/F407_Controller.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj
- .debug_info    0x000071b4      0x572 CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj
- .debug_info    0x00007726      0x387 CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
- .debug_info    0x00007aad     0x2931 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
- .debug_info    0x0000a3de      0xe91 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
- .debug_info    0x0000b26f     0x11f2 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
- .debug_info    0x0000c461      0xcbf CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
- .debug_info    0x0000d120      0x9f0 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_info    0x0000db10      0xee1 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
- .debug_info    0x0000e9f1      0xcaa CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
- .debug_info    0x0000f69b     0x10ab CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_info    0x00010746      0xb3f CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_info    0x00011285      0x75a CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
- .debug_info    0x000119df      0x84e CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
- .debug_info    0x0001222d      0x7b0 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_info    0x000129dd      0xb03 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_info    0x000134e0     0x1eb9 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_info    0x00015399     0x3dc6 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_info    0x0001915f     0x1b03 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_info    0x0001ac62     0x4afe CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
- .debug_info    0x0001f760      0x2e0 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_info    0x0001fa40      0x587 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_info    0x0001ffc7      0x5d9 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_info    0x000205a0     0x2826 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
- .debug_info    0x00022dc6     0x3197 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_info    0x00025f5d     0x1ab9 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ .debug_info    0x0000117a     0x16f5 CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+ .debug_info    0x0000286f      0x6a4 CMakeFiles/F407_Controller.elf.dir/Core/Src/gpio.c.obj
+ .debug_info    0x00002f13      0xf7d CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
+ .debug_info    0x00003e90      0xade CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
+ .debug_info    0x0000496e      0x4f8 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_info    0x00004e66      0xc9e CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
+ .debug_info    0x00005b04      0x779 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_info    0x0000627d      0x538 CMakeFiles/F407_Controller.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_info    0x000067b5      0xa14 CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj
+ .debug_info    0x000071c9       0x22 CMakeFiles/F407_Controller.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj
+ .debug_info    0x000071eb      0x572 CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj
+ .debug_info    0x0000775d      0x387 CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
+ .debug_info    0x00007ae4     0x2919 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+ .debug_info    0x0000a3fd      0xe91 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+ .debug_info    0x0000b28e     0x11f2 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+ .debug_info    0x0000c480      0xcbf CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
+ .debug_info    0x0000d13f      0x9f0 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_info    0x0000db2f      0xee1 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+ .debug_info    0x0000ea10      0xcaa CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+ .debug_info    0x0000f6ba     0x10ab CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_info    0x00010765      0xb3f CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_info    0x000112a4      0x75a CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+ .debug_info    0x000119fe      0x84e CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+ .debug_info    0x0001224c      0x7b0 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_info    0x000129fc      0xb03 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_info    0x000134ff     0x1eb9 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+ .debug_info    0x000153b8     0x3dc6 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_info    0x0001917e     0x1b03 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_info    0x0001ac81     0x4afe CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+ .debug_info    0x0001f77f      0x2e0 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_info    0x0001fa5f      0x587 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_info    0x0001ffe6      0x5d9 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_info    0x000205bf     0x2826 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+ .debug_info    0x00022de5     0x3197 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_info    0x00025f7c     0x1ab9 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 
 .debug_abbrev   0x00000000     0x4fb5
  .debug_abbrev  0x00000000      0x1e6 CMakeFiles/F407_Controller.elf.dir/Core/Src/adc.c.obj
@@ -3224,44 +3223,44 @@ LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/
  .debug_ranges  0x00001720      0x338 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .debug_ranges  0x00001a58       0xe0 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 
-.debug_line     0x00000000    0x1df9c
+.debug_line     0x00000000    0x1df9f
  .debug_line    0x00000000      0x57e CMakeFiles/F407_Controller.elf.dir/Core/Src/adc.c.obj
  .debug_line    0x0000057e      0x1ef CMakeFiles/F407_Controller.elf.dir/Core/Src/dma.c.obj
- .debug_line    0x0000076d      0xb0b CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
- .debug_line    0x00001278      0x234 CMakeFiles/F407_Controller.elf.dir/Core/Src/gpio.c.obj
- .debug_line    0x000014ac      0x634 CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
- .debug_line    0x00001ae0      0x45b CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
- .debug_line    0x00001f3b      0x203 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_line    0x0000213e      0x357 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
- .debug_line    0x00002495      0x335 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_line    0x000027ca      0x2bc CMakeFiles/F407_Controller.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_line    0x00002a86      0x354 CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj
- .debug_line    0x00002dda       0xbb CMakeFiles/F407_Controller.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj
- .debug_line    0x00002e95      0x319 CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj
- .debug_line    0x000031ae      0x37a CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
- .debug_line    0x00003528     0x11ea CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
- .debug_line    0x00004712      0x597 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
- .debug_line    0x00004ca9      0x71b CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
- .debug_line    0x000053c4      0x4cd CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
- .debug_line    0x00005891      0x607 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_line    0x00005e98     0x1149 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
- .debug_line    0x00006fe1      0xce8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
- .debug_line    0x00007cc9      0x833 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_line    0x000084fc      0xe91 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_line    0x0000938d      0x7e5 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
- .debug_line    0x00009b72      0x74e CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
- .debug_line    0x0000a2c0      0x74d CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_line    0x0000aa0d      0xb7b CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_line    0x0000b588     0x2616 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_line    0x0000db9e     0x4b45 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_line    0x000126e3     0x1d1c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_line    0x000143ff     0x2b03 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
- .debug_line    0x00016f02      0x3c5 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_line    0x000172c7      0x776 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_line    0x00017a3d      0x783 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_line    0x000181c0     0x209b CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
- .debug_line    0x0001a25b     0x2dd0 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_line    0x0001d02b      0xf71 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ .debug_line    0x0000076d      0xb0e CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
+ .debug_line    0x0000127b      0x234 CMakeFiles/F407_Controller.elf.dir/Core/Src/gpio.c.obj
+ .debug_line    0x000014af      0x634 CMakeFiles/F407_Controller.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x00001ae3      0x45b CMakeFiles/F407_Controller.elf.dir/Core/Src/spi.c.obj
+ .debug_line    0x00001f3e      0x203 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_line    0x00002141      0x357 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
+ .debug_line    0x00002498      0x335 CMakeFiles/F407_Controller.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_line    0x000027cd      0x2bc CMakeFiles/F407_Controller.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_line    0x00002a89      0x354 CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj
+ .debug_line    0x00002ddd       0xbb CMakeFiles/F407_Controller.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj
+ .debug_line    0x00002e98      0x319 CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj
+ .debug_line    0x000031b1      0x37a CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
+ .debug_line    0x0000352b     0x11ea CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+ .debug_line    0x00004715      0x597 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+ .debug_line    0x00004cac      0x71b CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+ .debug_line    0x000053c7      0x4cd CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
+ .debug_line    0x00005894      0x607 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_line    0x00005e9b     0x1149 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+ .debug_line    0x00006fe4      0xce8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+ .debug_line    0x00007ccc      0x833 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_line    0x000084ff      0xe91 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_line    0x00009390      0x7e5 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+ .debug_line    0x00009b75      0x74e CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+ .debug_line    0x0000a2c3      0x74d CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_line    0x0000aa10      0xb7b CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_line    0x0000b58b     0x2616 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+ .debug_line    0x0000dba1     0x4b45 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_line    0x000126e6     0x1d1c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_line    0x00014402     0x2b03 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+ .debug_line    0x00016f05      0x3c5 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_line    0x000172ca      0x776 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_line    0x00017a40      0x783 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_line    0x000181c3     0x209b CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+ .debug_line    0x0001a25e     0x2dd0 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_line    0x0001d02e      0xf71 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 
 .debug_str      0x00000000     0x8df1
  .debug_str     0x00000000      0x814 CMakeFiles/F407_Controller.elf.dir/Core/Src/adc.c.obj
@@ -3378,7 +3377,7 @@ LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/
  .comment       0x00000049       0x4a CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .comment       0x00000049       0x4a CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 
-.debug_frame    0x00000000     0x4d68
+.debug_frame    0x00000000     0x4d60
  .debug_frame   0x00000000       0x8c CMakeFiles/F407_Controller.elf.dir/Core/Src/adc.c.obj
  .debug_frame   0x0000008c       0x2c CMakeFiles/F407_Controller.elf.dir/Core/Src/dma.c.obj
  .debug_frame   0x000000b8       0xbc CMakeFiles/F407_Controller.elf.dir/Core/Src/freertos.c.obj
@@ -3392,35 +3391,35 @@ LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/
  .debug_frame   0x000003f4       0x58 CMakeFiles/F407_Controller.elf.dir/Core/Src/tim.c.obj
  .debug_frame   0x0000044c       0x44 CMakeFiles/F407_Controller.elf.dir/Drivers/BoardSupportPackage/Src/bsp.c.obj
  .debug_frame   0x00000490       0x78 CMakeFiles/F407_Controller.elf.dir/Drivers/Flash/Src/flash.c.obj
- .debug_frame   0x00000508      0x4a0 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
- .debug_frame   0x000009a8      0x17c CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
- .debug_frame   0x00000b24      0x2f0 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
- .debug_frame   0x00000e14      0x10c CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
- .debug_frame   0x00000f20      0x1ec CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_frame   0x0000110c      0x268 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
- .debug_frame   0x00001374      0x18c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
- .debug_frame   0x00001500      0x158 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_frame   0x00001658      0x188 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_frame   0x000017e0      0x168 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
- .debug_frame   0x00001948      0x164 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
- .debug_frame   0x00001aac       0xd8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_frame   0x00001b84      0x16c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_frame   0x00001cf0      0x5c8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_frame   0x000022b8      0xb10 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_frame   0x00002dc8      0x40c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_frame   0x000031d4      0x900 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
- .debug_frame   0x00003ad4       0x70 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_frame   0x00003b44      0x110 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_frame   0x00003c54       0xd0 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_frame   0x00003d24      0x458 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
- .debug_frame   0x0000417c      0x688 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_frame   0x00004804      0x30c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
- .debug_frame   0x00004b10       0x2c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00004b3c       0x34 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x00004b70       0x2c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
- .debug_frame   0x00004b9c       0x2c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
- .debug_frame   0x00004bc8       0x68 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
- .debug_frame   0x00004c30       0x20 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
- .debug_frame   0x00004c50       0x34 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
- .debug_frame   0x00004c84       0xb0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
- .debug_frame   0x00004d34       0x34 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
+ .debug_frame   0x00000508      0x498 CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd.c.obj
+ .debug_frame   0x000009a0      0x17c CMakeFiles/F407_Controller.elf.dir/Drivers/LCD_240_280/Src/lcd_interface.c.obj
+ .debug_frame   0x00000b1c      0x2f0 CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf.c.obj
+ .debug_frame   0x00000e0c      0x10c CMakeFiles/F407_Controller.elf.dir/Drivers/NRF/Src/nrf_interface.c.obj
+ .debug_frame   0x00000f18      0x1ec CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_frame   0x00001104      0x268 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+ .debug_frame   0x0000136c      0x18c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+ .debug_frame   0x000014f8      0x158 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_frame   0x00001650      0x188 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_frame   0x000017d8      0x168 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+ .debug_frame   0x00001940      0x164 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+ .debug_frame   0x00001aa4       0xd8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_frame   0x00001b7c      0x16c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_frame   0x00001ce8      0x5c8 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+ .debug_frame   0x000022b0      0xb10 CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_frame   0x00002dc0      0x40c CMakeFiles/F407_Controller.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_frame   0x000031cc      0x900 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+ .debug_frame   0x00003acc       0x70 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_frame   0x00003b3c      0x110 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_frame   0x00003c4c       0xd0 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_frame   0x00003d1c      0x458 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+ .debug_frame   0x00004174      0x688 CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_frame   0x000047fc      0x30c CMakeFiles/F407_Controller.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ .debug_frame   0x00004b08       0x2c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00004b34       0x34 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00004b68       0x2c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
+ .debug_frame   0x00004b94       0x2c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
+ .debug_frame   0x00004bc0       0x68 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00004c28       0x20 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
+ .debug_frame   0x00004c48       0x34 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
+ .debug_frame   0x00004c7c       0xb0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .debug_frame   0x00004d2c       0x34 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
