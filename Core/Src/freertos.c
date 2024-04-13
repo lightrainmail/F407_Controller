@@ -188,14 +188,14 @@ void App_main(void *argument)
         }
 
         if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_1) == GPIO_PIN_RESET) {
-            offset[0] += 10;
+            txBuffer[8] = 0b10101010;
             if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_1) == GPIO_PIN_RESET) {
                 while (HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_1) == GPIO_PIN_RESET);
             }
         }
 
         if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_2) == GPIO_PIN_RESET) {
-            offset[0] -= 10;
+            txBuffer[8] = 0b01010101;
             if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_2) == GPIO_PIN_RESET) {
                 while (HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_2) == GPIO_PIN_RESET);
             }
@@ -253,7 +253,6 @@ void App_main(void *argument)
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
 CCMRAM uint8_t DisplayBuffer[7372];
-CCMRAM uint16_t DisPlayBuffer2[10000];
 void App_lcd(void *argument) {
     //显示背景
     taskENTER_CRITICAL();
@@ -265,10 +264,6 @@ void App_lcd(void *argument) {
 
     for(uint16_t i = 0;i < 7372;i++) {
         DisplayBuffer[i] = gImage_Buffer[i];
-    }
-
-    for(uint16_t i = 0;i < 10000;i++) {
-        DisPlayBuffer2[i] = (gImage_JuXing[2*i] << 8) | (gImage_JuXing[2*i+1]);
     }
 
     uint16_t y = 0;
@@ -289,13 +284,13 @@ void App_lcd(void *argument) {
             DisplayBuffer[num + i] = gImage_JianTou[i];
         }
 
-        taskENTER_CRITICAL();
+//        taskENTER_CRITICAL();
         LCD_ShowPicture2(45,65,19,194,DisplayBuffer);
         LCD_ShowIntNumber(160,89,offset[2] + 1,3,BLACK,WHITE,24);
         LCD_ShowIntNumber(160,129,offset[3] + 1,3,BLACK,WHITE,24);
         LCD_ShowIntNumber(160,167,offset[0] + 1,3,BLACK,WHITE,24);
         LCD_ShowIntNumber(160,204,offset[1] + 1,3,BLACK,WHITE,24);
-        taskEXIT_CRITICAL();
+//        taskEXIT_CRITICAL();
 
         num_old = num;
         vTaskDelay(1);
@@ -318,8 +313,10 @@ void App_adc(void *param) {
 
                 adc_temp[i] = BSP_Filter(adc_temp[i],0.35f,i);
 
+                //叠加微调值
                 adc_temp[i] += offset[i];
 
+                //添加饱和器
                 if(adc_temp[i] >= 4095) {
                     adc_temp[i] = 4095;
                 }
